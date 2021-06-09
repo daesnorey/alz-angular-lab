@@ -11,7 +11,6 @@ export class AppComponent {
   public name: string = 'Juan Carlos';
   public lastname: string = 'Sanchez';
   public birthdate: string = '1995-06-24';
-
   constructor(){
 
   }
