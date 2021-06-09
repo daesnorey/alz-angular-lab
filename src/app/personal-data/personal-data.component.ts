@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-data.component.css']
 })
 export class PersonalDataComponent implements OnInit {
-  public name?: string;
-  public lastname?: string;
-  public birthDate?: string;
+  public name?: string = 'Daniel';
+  public lastname?: string = 'Novoa';
+  public birthDate?: string = '1991-01-01';
 
   constructor() { }
 
@@ -16,11 +16,11 @@ export class PersonalDataComponent implements OnInit {
   }
 
   public nameChanged(ev: any) {
-    this.name = ev.target.value;
+    this.name = ev.target.value.toLowerCase();
   }
 
   public lastChanged(ev: any) {
-    this.lastname = ev.target.value;
+    this.lastname = ev.target.value.toLowerCase();
   }
 
   public birthDateChanged(ev: any) {

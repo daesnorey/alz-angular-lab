@@ -12,12 +12,26 @@
     display: flex;
     width: 400px;
     flex-flow: column;
+    padding: 2rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
 }
 
 .form > .form-field {
-    margin-top: 1.5rem;
     display: flex;
     flex-flow: column;
+}
+
+.form > .form-field:not(:first-child) {
+    margin-top: 1.5rem;
+}
+
+.form > .form-field > input {
+    padding: 0.5em 0.8em;
+}
+
+.form > .form-field > input:not([type="date"]) {
+    text-transform: capitalize;
 }
 
 .show {
