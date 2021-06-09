@@ -1,0 +1,11 @@
+
+<p>Nombres: <input type="text" name="nombre" [value]="name" (change)="onNameChanged($event)"></p>
+
+  <p>Apellidos: <input type="text" name="apellidos" size="40" [value]="lastName" (change)="onlastNameChanged($event)"></p>
+
+  <label for="start">Fecha de nacimiento:</label>
+
+  <input type="date" id="start" name="trip-start" max="2021-05-31" [value]="birthDate" (change)="onbirthDateChanged($event)">
+  <br>
+  <br>
+  {{name}}, {{lastName}} es del: {{birthDate}}
