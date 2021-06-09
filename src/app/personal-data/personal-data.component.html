@@ -1,0 +1,23 @@
+<article class="form">
+  <div class="form-field">
+    <label for="name">Nombre</label>
+    <input type="text" placeholder="Nombre" (change)="nameChanged($event)">
+  </div>
+  <div class="form-field">
+    <label for="lastname">Apellido</label>
+    <input type="text" placeholder="Apellido" (change)="lastChanged($event)">
+  </div>
+  <div class="form-field">
+    <label for="birthdate">Fecha de nacimiento</label>
+    <input type="date" placeholder="Fecha de nacimiento" (change)="birthDateChanged($event)">
+  </div>
+</article>
+
+<section class="show">
+    <span *ngIf="name && lastname">
+      Hola, {{ name }} {{ lastname }}
+    </span>
+    <span *ngIf="birthDate">
+      {{ birthDate | date }}
+    </span>
+  </section>
