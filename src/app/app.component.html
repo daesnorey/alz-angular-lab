@@ -1,20 +1,19 @@
-<div class="container" >
-  <form>
-  
+    
   <label>Nombre</label>
   <br>
-  <input type="text"  name="nombre">
+  <input   placeholder="nombre" [value]="name" (change)="onNameChanged($event)">
   <br>
   <label>Apellido</label>
   <br>
-  <input type="text"  name="apellido">
+  <input   placeholder="apellido" [value]="lastname" (change)="onLastnameChanged($event)">
   <br>
   <label for="start">Fecha de nacimiento:</label>
   <br>
-  <input type="date" id="start" name="trip-start"
-         value="2018-07-22"
-         min="2018-01-01" max="2018-12-31">
+  <input type="date" placeholder="fecha-nacimiento" [value]="birthdate" (change)="onBirthdateChanged($event)">
+    
+  {{name}} {{lastname}} nació en {{birthdate}}
+
+  <br>
+  <br>
+  <app-test></app-test>
   
-  </form>
-  
-  </div>
