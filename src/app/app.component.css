@@ -1,0 +1,9 @@
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.formItem {
+    padding-bottom: 1ch;
+}
