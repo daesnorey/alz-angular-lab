@@ -1,4 +1,12 @@
 <h1>PRIMER ANGULAR</h1>
-<app-formulario></app-formulario>
+El usuario {{matchName}} {{matchLastName}} tiene fecha de nacimiento del: {{matchBirthDate}}
+<app-formulario
+    [name]="matchName"
+    [lastName]="matchLastName"
+    [birthDate]="matchBirthDate"
+    (valueChangedName) = "onChangeName($event)"
+    (valueChangedLastName) = "onChangeLastName($event)"
+    (valueChangedBirthDate) = "onChangeBirthDate($event)"
+></app-formulario>
 
 
