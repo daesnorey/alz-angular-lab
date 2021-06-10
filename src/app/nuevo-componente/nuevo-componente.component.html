@@ -1,7 +1,9 @@
 <p>¡Nuevo Componente!</p>
-<input placeholder="Nombre" type="text">
+<input placeholder="Nombre" type="text" (change)="cambioNombre($event)" [value]="nombre">
 <br>
-<input placeholder="Apellido" type="text">
+<input placeholder="Apellido" type="text" (change)="cambioApellido($event)" [value]="apellido" >
 <br>
 <label>Fecha de nacimiento: </label>
-<input type="date">
+<input type="date" (change)="cambioFecha($event)">
+
+<p>Bienvenido {{nombre}} {{apellido}}</p> {{fechaNacimiento}}
