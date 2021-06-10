@@ -1,1 +1,7 @@
-<app-form></app-form>
+{{parentName}}, {{parentLastName}} nació el día: {{parentBirthDate}}
+<app-form [name]= "parentName" 
+[lastName]="parentLastName" 
+[birthDate]="parentBirthDate"
+(valueChangedName) = "onChangeName($event)"
+(valueChangedLastName) = "onChangeLastName($event)"
+(valueChangedBirthDate) = "onChangeBirthDate($event)"></app-form>

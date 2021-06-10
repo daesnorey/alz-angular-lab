@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -7,28 +7,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
-  public name: String = "Juan" ;
-  public lastName: String = "Ochoa" ;
-  public birthDate: String = "1996-06-07" ;
+  @Input()
+  public name?: String ;
 
-  public onNameChanged(ev: any){
-    this.name = ev.target.value;
+  @Input()
+  public lastName?: String = "" ;
+
+  @Input()
+  public birthDate?: String = "" ;
+
+  @Output()
+  public valueChangedName!: EventEmitter<string>;
+
+  @Output()
+  public valueChangedLastName!: EventEmitter<string>;
+
+  @Output()
+  public valueChangedBirthDate!: EventEmitter<string>;
+
+  constructor(){
+    this.valueChangedName = new EventEmitter();
+    this.valueChangedLastName = new EventEmitter();
+    this.valueChangedBirthDate = new EventEmitter();
   }
 
-  public onLastNameChanged(ev: any){
-    this.lastName = ev.target.value;
+  public onChangedName(eve: any){
+    this.valueChangedName.next(eve.target.value);
   }
-
-  public onBirthDateChanged(ev: any){
-    this.birthDate = ev.target.value;
+  public onChangedLastName(eve: any){
+    this.valueChangedLastName.next(eve.target.value);
   }
-
+  public onChangedBirthDate(eve: any){
+    this.valueChangedBirthDate.next(eve.target.value);
+  }
   
-
-
 }
