@@ -1,0 +1,15 @@
+.message-wrapper {
+    width: auto;
+    margin-bottom: 2.5em;
+    height: auto;
+}
+
+.message {
+    color: snow;
+    width: auto;
+    display: inline;
+    clear: both;
+    padding: 1em 1em;
+    background: sienna;
+    border-radius: 1em 3em;
+}

@@ -1,1 +1,6 @@
-<p>personal-chat-message-list works!</p>
+<div class="message-wrapper" *ngFor="let message of messages">
+    <span class="message">
+        {{ message }}
+    </span>
+    <br>
+</div>

@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
@@ -18,7 +22,10 @@ import { PersonalChatMessageListComponent } from './personal-chat-message-list/p
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

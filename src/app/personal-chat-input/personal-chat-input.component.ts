@@ -7,12 +7,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class PersonalChatInputComponent implements OnInit {
 
-  @Output() onMessage!: EventEmitter<string>;
+  @Output() public messaged!: EventEmitter<string>;
 
   public message: string = '';
 
   constructor() {
-    this.onMessage = new EventEmitter();
+    this.messaged = new EventEmitter();
   }
 
   ngOnInit(): void {
@@ -25,6 +25,13 @@ export class PersonalChatInputComponent implements OnInit {
 
   public submit(ev: Event) {
     ev.preventDefault();
-    ev.stopPropagation();
+    ev.stopImmediatePropagation();
+
+    if (!this.message) {
+      return;
+    }
+
+    this.messaged.next(this.message);
+    this.clearMessage();
   }
 }

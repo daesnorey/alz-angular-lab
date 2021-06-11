@@ -1,15 +1,15 @@
 <article class="form mat-typography">
   <div class="form-field">
     <label for="name">Nombre</label>
-    <input id="name" [value]="name" type="text" (change)="nameChanged($event)">
+    <input id="name" [(ngModel)]="name" type="text" (input)="onChange($event)">
   </div>
   <div class="form-field">
     <label for="lastname">Apellido</label>
-    <input id="lastname" [value]="lastname" type="text" (change)="lastChanged($event)">
+    <input id="lastname" [(ngModel)]="lastname" type="text">
   </div>
   <div class="form-field">
     <label for="birthdate">Fecha de nacimiento</label>
-    <input id="birthdate" [value]="birthDate" type="date" (change)="birthDateChanged($event)">
+    <input id="birthdate" [(ngModel)]="birthDate" type="date">
   </div>
 </article>
 
@@ -18,6 +18,6 @@
     Hola, {{ name | titlecase }} {{ lastname | titlecase }}
   </span>
   <span *ngIf="birthDate">
-    {{ birthDate | date }}
+    Tu fecha de nacimiento es: {{ birthDate }}
   </span>
 </section>

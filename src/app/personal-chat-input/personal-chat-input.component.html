@@ -1,6 +1,6 @@
 <form (submit)="submit($event)">
-    <input type="text" ([ngModel])="message" >
-    <button type="submit">
-        
+    <input type="text" name="message" [(ngModel)]="message" >
+    <button mat-icon-button type="submit">
+        <mat-icon>send</mat-icon>
     </button>
 </form>
