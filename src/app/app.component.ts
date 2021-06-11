@@ -8,22 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-appEveris';
 
-  public name: string = 'Juan Carlos';
-  public lastname: string = 'Sanchez';
-  public birthdate: string = '1995-06-24';
-  constructor(){
+  public parentName?: String = "Juan Carlos" ;
+  public parentLastName?: String = "Sanchez Solorzano" ;
+  public parentBirthDate?: String = "1995-06-24" ;
 
+  public onChangeName(name: string){
+    this.parentName = name;
   }
 
-  public onNameChanged(ev: any){
-    this.name = ev.target.value;
+  public onChangeLastName(lastName: string){
+    this.parentLastName = lastName;
   }
 
-  public onLastnameChanged(ev: any){
-    this.lastname = ev.target.value;
-  }
-
-  public onBirthdateChanged(ev: any){
-    this.birthdate = ev.target.value;
+  public onChangeBirthDate(birthDate: string){
+    this.parentBirthDate = birthDate;
   }
 }
