@@ -1,5 +1,5 @@
 
-<app-first-component
+<!-- <app-first-component
     [name]="parentName" 
     [lastname]="parentLastname" 
     [birthdate]="parentBirthdate"    
@@ -8,4 +8,10 @@
     (birthdateChanged)="onBirthdateChangeParent($event)"
     >
 </app-first-component>
-<h3>{{parentName}}, {{parentLastname}} {{parentBirthdate}}</h3> 
+<h3>{{parentName}}, {{parentLastname}} {{parentBirthdate}}</h3>  -->
+
+<app-first-component (onMessageSubmit)="onMessageChangeParent($event)">
+</app-first-component>
+
+<app-second-component [finalMessages]="parentMessages">
+</app-second-component>
