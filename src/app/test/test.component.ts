@@ -7,8 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {  }
 
   @Input()
   public name?: String ;

@@ -1,3 +1,4 @@
 {{parentName}}, {{parentLastName}} nació el día: {{parentBirthDate}}
+
 <app-test [name]="parentName" [lastName]="parentLastName" [birthDate]="parentBirthDate" (valueChangedName)="onChangeName($event)" (valueChangedLastName)="onChangeLastName($event)" (valueChangedBirthDate)="onChangeBirthDate($event)">
 </app-test>
