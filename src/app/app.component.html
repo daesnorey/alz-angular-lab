@@ -1,1 +1,13 @@
-<app-nuevo-componente></app-nuevo-componente>
+<!--Al componente hijo que se esta llamando desde el template inicial envio como parametros 
+    los valores iniciales que se declararon en el componente padre-->
+<app-nuevo-componente
+ [nombreComponentHijo] = "nombreComponentPadre" 
+ [apellidoComponentHijo] = "apellidoComponentPadre"
+ [fechaNacimientoComponentHijo] = "fechaNacimientoComponentPadre"
+ (changeName)="changeNamePatern($event)"
+ (changeLastName)="changeLastNamePatern($event)"
+ (changeDate)="changeDatePatern($event)"
+  >
+</app-nuevo-componente>
+<br><br>
+¡Hola {{nombreComponentPadre}}! {{apellidoComponentPadre}}, esta seleccionada la fecha {{fechaNacimientoComponentPadre}}
