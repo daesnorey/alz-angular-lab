@@ -6,22 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public name: string = 'Jaime';
-  public lastname: string = 'Zabala';
-  public birthdate: string = '1998-11-30';
+
+  public parentName: string = 'Jaime';
+  public parentLastname: string = 'Zabala';
+  public parentBirthdate: string = '1998-11-30';
   
   title = 'proyectangul';
   constructor() { }
 
-  public onNameChanged(ev: any){
-  this.name=ev.target.value;
+  public onNameChanged(name: string){
+  this.parentName=name;
   }
-  public onLastnameChanged(ev: any){
+  public onLastnameChanged(lastName: string){
 
-    this.lastname=ev.target.value;
+    this.parentLastname=lastName  ;
   }
-  public onBirthdateChanged(ev: any){
+  public onBirthdateChanged(birthDate: string){
 
-    this.birthdate=ev.target.value;
+    this.parentBirthdate=birthDate;
   }
+
+  
 }
