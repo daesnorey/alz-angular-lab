@@ -11,13 +11,13 @@ export class FormComponent implements OnInit {
   }
 
   @Input()
-  public name?: String ;
+  public name?: String;
 
   @Input()
-  public lastName?: String = "" ;
+  public lastName?: String;
 
   @Input()
-  public birthDate?: String = "" ;
+  public birthDate?: String;
 
   @Output()
   public valueChangedName!: EventEmitter<string>;
