@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-first-component',
@@ -6,23 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first-component.component.css']
 })
 export class FirstComponentComponent implements OnInit {
-   public name: string='Juan';
-   public lastname: string='Ordóñez';
-   public birthdate: string='1985-07-04';
+  @Input () name?: string;
+  @Input () lastname?: string;
+  @Input () birthdate?: string;  
 
-  constructor() { }
+  @Output() nameChanged!: EventEmitter<string>;
+  @Output() lastnameChanged!: EventEmitter<string>;
+  @Output() birthdateChanged!: EventEmitter<string>;
+
+  constructor() {
+      this.nameChanged = new EventEmitter();
+      this.lastnameChanged = new EventEmitter();
+      this.birthdateChanged = new EventEmitter();
+   }
+
+  public onNameChange(eve: any){
+    this.nameChanged.next(eve.target.value);
+  }
+  public onLastnameChange(eve: any){
+    this.lastnameChanged.next(eve.target.value);
+  }
+  public onBirthdateChange(eve: any){
+    this.birthdateChanged.next(eve.target.value);
+  }
 
   ngOnInit(): void {
-  }
-
-  public onNameChanged(ev: any) {
-    this.name= ev.target.value;    
-  }
-  public onLastnameChanged(ev: any) {
-    this.lastname= ev.target.value;    
-  }
-  public onBirthdateChanged(ev: any) {
-    this.birthdate= ev.target.value;    
   }
 
 }

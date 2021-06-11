@@ -1,5 +1,11 @@
-<h2>Formulario con componente:</h2>
 
-<app-first-component></app-first-component>
-
-
+<app-first-component
+    [name]="parentName" 
+    [lastname]="parentLastname" 
+    [birthdate]="parentBirthdate"    
+    (nameChanged)="onNameChangeParent($event)"
+    (lastnameChanged)="onLastnameChangeParent($event)"
+    (birthdateChanged)="onBirthdateChangeParent($event)"
+    >
+</app-first-component>
+<h3>{{parentName}}, {{parentLastname}} {{parentBirthdate}}</h3> 
