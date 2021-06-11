@@ -6,7 +6,14 @@ El usuario {{matchName}} {{matchLastName}} tiene fecha de nacimiento del: {{matc
     [birthDate]="matchBirthDate"
     (valueChangedName) = "onChangeName($event)"
     (valueChangedLastName) = "onChangeLastName($event)"
-    (valueChangedBirthDate) = "onChangeBirthDate($event)"
-></app-formulario>
+    (valueChangedBirthDate) = "onChangeBirthDate($event)">
+</app-formulario>
+<app-primer-chat
+    (valueChangedMessage) = "onChangeMessage($event)">
+</app-primer-chat>
+<app-segundo-chat
+    [messages] = "matchMessages">
+</app-segundo-chat>
+
 
 

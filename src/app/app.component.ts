@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,13 @@ export class AppComponent {
   public matchName?: string="Carlos";
   public matchLastName?: string = "Suarez";
   public matchBirthDate?: string = "1996-01-02";
+  
+  public matchMessages?: string[] = [];
+  
 
+  public onChangeMessage(message : string){
+    this.matchMessages.push(message!);
+  }
   public onChangeName(name: string){
     this.matchName = name;
   }
