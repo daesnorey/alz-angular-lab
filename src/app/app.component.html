@@ -1,19 +1,10 @@
-    
-  <label>Nombre</label>
-  <br>
-  <input   placeholder="nombre" [value]="name" (change)="onNameChanged($event)">
-  <br>
-  <label>Apellido</label>
-  <br>
-  <input   placeholder="apellido" [value]="lastname" (change)="onLastnameChanged($event)">
-  <br>
-  <label for="start">Fecha de nacimiento:</label>
-  <br>
-  <input type="date" placeholder="fecha-nacimiento" [value]="birthdate" (change)="onBirthdateChanged($event)">
-    
-  {{name}} {{lastname}} nació en {{birthdate}}
-
-  <br>
-  <br>
-  <app-test></app-test>
+  <h2>{{parentName}} {{parentLastname}} nació el: {{parentBirthdate}}</h2>
+  
+  <app-test 
+  [name]="parentName"
+  [lastname]="parentLastname"
+  [birthdate]="parentBirthdate"
+  (valueChangedName) = "onNameChanged($event)"
+  (valueChangedLastName) = "onLastnameChanged($event)"
+  (valueChangedBirthDate) = "onBirthdateChanged($event)"></app-test>
   
