@@ -1,20 +1,15 @@
-<div class="container" >
-    <form>
     
-    <label>Nombre</label>
-    <br>
-    <input type="text"  name="nombre">
-    <br>
-    <label>Apellido</label>
-    <br>
-    <input type="text"  name="apellido">
-    <br>
-    <label for="start">Fecha de nacimiento:</label>
-    <br>
-    <input type="date" id="start" name="trip-start"
-           value="2018-07-22"
-           min="2018-01-01" max="2018-12-31">
-    
-    </form>
-    
-    </div>
+  <label>Nombre</label>
+  <br>
+  <input   placeholder="nombre" [(ngModel)]="name" (input)="onChangedName($event)">
+  <br>
+  <label>Apellido</label>
+  <br>
+  <input   placeholder="apellido" [(ngModel)]="lastname" (input)="onChangedLastName($event)">
+  <br>
+  <label for="start">Fecha de nacimiento:</label>
+  <br>
+  <input type="date" placeholder="fecha-nacimiento" [(ngModel)]="birthdate" (input)="onChangedBirthDate($event)">
+  <br>
+  <br>
+  {{name}} {{lastname}} nació en {{birthdate}}
