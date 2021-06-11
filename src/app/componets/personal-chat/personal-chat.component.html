@@ -1,0 +1,6 @@
+<form (submit)="enviar()">
+    <h2>Chat</h2>
+    <input type="text" id="txtMenssage" name="txtMenssage" [(ngModel)]="mensaje" ><br>
+    <button class="btn btn-primary">ENVIAR</button>
+    <button class="btn btn-danger" (click)="limpiar()">Limpiar</button>
+</form>
