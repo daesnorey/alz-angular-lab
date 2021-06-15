@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormularioService } from 'src/app/services/formulario.service';
 
 @Component({
   selector: 'app-form',
@@ -7,29 +8,29 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  @Input()
   public name?: string;
-  @Input()
   public lastname?: string;
-  @Input()
   public birthdate?: string;
   
-  @Output()
-  public onValueChange!: EventEmitter<string>
-
-  @Output() 
-  public nameChanged!: EventEmitter<string>;
-  @Output() 
-  public lastnameChanged!: EventEmitter<string>;
-  @Output() 
-  public birthdateChanged!: EventEmitter<string>;
-  
-  constructor() {
-    this.onValueChange = new EventEmitter();
+  constructor(private formularioService : FormularioService) {
   }
   
-  public onChange(ev: any){
-    this.onValueChange.next(ev.target.value);
+  /**
+   * enviar
+   */
+  public enviar() {
+    // this.formularioService.newPerson(this.name + " " + this.lastname + " " + this.birthdate)
+    this.formularioService.newPerson(
+      {
+        name: this.name,
+        lastname: this.lastname,
+        birthdate : this.birthdate
+      }
+    )
+
+    this.name = '';
+    this.lastname = '';
+    this.birthdate = '';
   }
 
   ngOnInit(): void {

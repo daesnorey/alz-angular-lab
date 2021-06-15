@@ -8,6 +8,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PersonalChatComponent } from './componets/personal-chat/personal-chat.component';
 import { TableChatComponent } from './componets/table-chat/table-chat.component';
 import { ChatComponent } from './componets/chat/chat.component';
+import { PersonProfileComponent } from './componets/person-profile/person-profile.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChatComponent } from './componets/chat/chat.component';
     FormComponent,
     PersonalChatComponent,
     TableChatComponent,
-    ChatComponent
+    ChatComponent,
+    PersonProfileComponent
   ],
   imports: [
     BrowserModule,

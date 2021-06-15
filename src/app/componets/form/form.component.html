@@ -1,12 +1,11 @@
-<form>
+<form (submit)="enviar()">
     <div class="form-group">
         <label for="txtNombre">Name:</label><br>  
-        <input type="text" id="txtNombre" name="txtNombre" [(ngModel)]="name" (input)="onChange($event)"><br>
+        <input type="text" id="txtNombre" name="txtNombre" [(ngModel)]="name" ><br>
         <label for="txtLastname">Last Name:</label><br>  
-        <input type="text" id="txtLastname" name="txtLastname" [(ngModel)]="lastname" (input)="onChange($event)"><br>
-        <label for="txtNombre">Name:</label><br>  
-        <input type="date" id="dateBirthdate" name="dateBirthdate" [(ngModel)]="birthdate" (input)="onChange($event)"><br>
+        <input type="text" id="txtLastname" name="txtLastname" [(ngModel)]="lastname" ><br>
+        <label for="dateBirthdate">Birthdate:</label><br>  
+        <input type="date" id="dateBirthdate" name="dateBirthdate" [(ngModel)]="birthdate" ><br>
     </div>
     <button class="btn btn-primary">Send</button>
 </form>
-<p>{{name}}, {{lastname}}</p>
