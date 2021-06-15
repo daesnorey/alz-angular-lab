@@ -8,9 +8,11 @@ import { FormularioService } from 'src/app/services/formulario.service';
 })
 export class FormComponent implements OnInit {
 
-  public name?: string;
-  public lastname?: string;
-  public birthdate?: string;
+  public persona = {
+    name: '',
+    lastname:'',
+    birthdate:''
+  }
   
   constructor(private formularioService : FormularioService) {
   }
@@ -20,17 +22,13 @@ export class FormComponent implements OnInit {
    */
   public enviar() {
     // this.formularioService.newPerson(this.name + " " + this.lastname + " " + this.birthdate)
-    this.formularioService.newPerson(
-      {
-        name: this.name,
-        lastname: this.lastname,
-        birthdate : this.birthdate
-      }
-    )
+    this.formularioService.newPerson(this.persona)
+    this.persona = {
+      name: '',
+      lastname:'',
+      birthdate:''
+    }
 
-    this.name = '';
-    this.lastname = '';
-    this.birthdate = '';
   }
 
   ngOnInit(): void {

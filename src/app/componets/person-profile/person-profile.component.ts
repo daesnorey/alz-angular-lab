@@ -8,11 +8,9 @@ import { FormularioService } from 'src/app/services/formulario.service';
 })
 export class PersonProfileComponent implements OnInit {
 
-  public person: string[] = []
   public persons: any[] = []
 
   constructor(private formularioService : FormularioService) { 
-    // this.person = formularioService.getPerson();
     this.persons = formularioService.getPersons();
   }
 
