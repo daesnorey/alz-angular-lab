@@ -1,4 +1,6 @@
-<article class="chat-container">
-  <app-chat (messageSubmitted)="onMessageSubmitted($event)"></app-chat>
-  <app-chat-messages [messages]="messagesP"></app-chat-messages>
-</article>
+<form (ngSubmit)="onSubmit()">
+    <input [(ngModel)] = "name" name="name">
+    <input [(ngModel)] = "lastName" name="lastName">
+    <input type="date" [(ngModel)] = "birthDate" name="birthDate">
+    <button type="submit">Enviar</button>
+</form>
