@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
   selector: 'app-personal-chat',
@@ -6,29 +7,23 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./personal-chat.component.css']
 })
 export class PersonalChatComponent implements OnInit {
-  @Input()
+
   public mensaje?: string;
   
-  @Output()
-  public sendMesage!: EventEmitter<string>
-  @Output()
-  public limpiarMensajes!: EventEmitter<string>
-  
-  constructor() {
-    this.sendMesage = new EventEmitter();
-    this.limpiarMensajes = new EventEmitter();
+  constructor(private chatService: ChatService ) {
   }
   
   public enviar(){
     if(this.mensaje){
-      this.sendMesage.next(this.mensaje);
+      // this.sendMesage.next(this.mensaje);
+      this.chatService.addMensagges(this.mensaje)
       console.log("enviado----"+ this.mensaje)
       this.mensaje = '';
     }
   }
 
   public limpiar(){
-      this.limpiarMensajes.next("0");
+    this.chatService.deleteAllMensagges()
   }
 
   ngOnInit(): void {
