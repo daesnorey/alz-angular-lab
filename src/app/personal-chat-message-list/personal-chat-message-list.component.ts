@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ChatService } from '../chat/chat.service';
 
 @Component({
   selector: 'app-personal-chat-message-list',
@@ -7,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class PersonalChatMessageListComponent {
 
-  @Input() public messages!: string[];
+  constructor(
+    public chatService: ChatService,
+  ) {}
 
 }

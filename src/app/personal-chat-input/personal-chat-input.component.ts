@@ -1,5 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
+import { ChatService } from '../chat/chat.service';
+
 @Component({
   selector: 'app-personal-chat-input',
   templateUrl: './personal-chat-input.component.html',
@@ -7,12 +9,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class PersonalChatInputComponent implements OnInit {
 
-  @Output() public messaged!: EventEmitter<string>;
-
   public message: string = '';
 
-  constructor() {
-    this.messaged = new EventEmitter();
+  constructor(
+    private chatService: ChatService
+  ) {
   }
 
   ngOnInit(): void {
@@ -31,7 +32,7 @@ export class PersonalChatInputComponent implements OnInit {
       return;
     }
 
-    this.messaged.next(this.message);
+    this.chatService.addMessage(this.message);
     this.clearMessage();
   }
 }
