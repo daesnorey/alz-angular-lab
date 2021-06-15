@@ -1,18 +1,10 @@
 <h1>PRIMER ANGULAR</h1>
-El usuario {{matchName}} {{matchLastName}} tiene fecha de nacimiento del: {{matchBirthDate}}
-<app-formulario
-    [name]="matchName"
-    [lastName]="matchLastName"
-    [birthDate]="matchBirthDate"
-    (valueChangedName) = "onChangeName($event)"
-    (valueChangedLastName) = "onChangeLastName($event)"
-    (valueChangedBirthDate) = "onChangeBirthDate($event)">
+El usuario {{formularioService.matchName}} {{formularioService.matchLastName}} tiene fecha de nacimiento del: {{formularioService.matchBirthDate}}
+<app-formulario>
 </app-formulario>
-<app-primer-chat
-    (valueChangedMessage) = "onChangeMessage($event)">
+<app-primer-chat>
 </app-primer-chat>
-<app-segundo-chat
-    [messages] = "matchMessages">
+<app-segundo-chat>
 </app-segundo-chat>
 
 

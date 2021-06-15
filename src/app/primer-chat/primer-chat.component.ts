@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChatService } from '../chat/chat.service';
 
 @Component({
   selector: 'app-primer-chat',
@@ -7,20 +8,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class PrimerChatComponent implements OnInit {
 
-  @Input()
   public message?: string;
-  @Output()
-  public valueChangedMessage!: EventEmitter<string>;
   
-  constructor() { 
-    this.valueChangedMessage = new EventEmitter();
+  constructor(private chatService : ChatService) {
+    
   }
 
   ngOnInit(): void {
   }
   
   public onChangeMessage(){
-      this.valueChangedMessage.next(this.message);
+      this.chatService.addMessages(this.message);
       this.message = '';
   }
 

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormularioService } from './formulario.service';
 
 @Component({
   selector: 'app-formulario',
@@ -9,42 +10,17 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @Input()
-  public name?: string;
-
-  @Input()
-  public lastName?: string;
-
-  @Input()
-  public birthDate?: string;
-
-  /*public onNameChanged(ev: any){
-    this.name = ev.target.value;
-  }*/
-
-  @Output()
-  public valueChangedName!: EventEmitter<string>;
-
-
-  @Output()
-  public valueChangedLastName!: EventEmitter<string>;
-
-  @Output()
-  public valueChangedBirthDate!: EventEmitter<string>;
-
-  constructor(){
-    this.valueChangedName = new EventEmitter();
-    this.valueChangedLastName = new EventEmitter();
-    this.valueChangedBirthDate = new EventEmitter();
+  constructor(public formularioService: FormularioService){
+    
   }
 
   public onChangedName(eve: any){
-    this.valueChangedName.next(eve.target.value);
+    this.formularioService.onChangeName(eve.target.value);
   }
   public onChangedLastName(eve: any){
-    this.valueChangedLastName.next(eve.target.value);
+    this.formularioService.onChangeLastName(eve.target.value);
   }
   public onChangedBirthDate(eve: any){
-    this.valueChangedBirthDate.next(eve.target.value);
+    this.formularioService.onChangeBirthDate(eve.target.value);
   }
 }

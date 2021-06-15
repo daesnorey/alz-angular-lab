@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ChatService } from '../chat/chat.service';
 
 @Component({
   selector: 'app-segundo-chat',
@@ -6,16 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./segundo-chat.component.css']
 })
 export class SegundoChatComponent implements OnInit {
-  @Input()
+
   public messages: string[] = [];
 
-  constructor() { }
+  constructor(public chatService : ChatService) { }
 
   ngOnInit(): void {
   }
 
-  public onChangeMessage(message : string[]){
-    this.messages = message;
-  }
 
 }

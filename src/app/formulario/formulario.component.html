@@ -1,11 +1,11 @@
 
-<p>Nombres: <input type="text" name="nombre" [(ngModel)]="name"  (input)= "onChangedName($event)"></p>
+<p>Nombres: <input type="text" name="nombre" [(ngModel)]="formularioService.matchName"  (input)= "onChangedName($event)"></p>
 
-  <p>Apellidos: <input type="text" name="apellidos" size="40" [(ngModel)]="lastName" (input)= "onChangedLastName($event)"></p>
+  <p>Apellidos: <input type="text" name="apellidos" size="40" [(ngModel)]="formularioService.matchLastName" (input)= "onChangedLastName($event)"></p>
 
   <label for="start">Fecha de nacimiento:</label>
 
-  <input type="date" id="start" name="trip-start" max="2021-05-31" [(ngModel)]="birthDate" (input)= "onChangedBirthDate($event)">
+  <input type="date" id="start" name="trip-start" max="2021-05-31" [(ngModel)]="formularioService.matchBirthDate" (input)= "onChangedBirthDate($event)">
   <br>
   <br>
   
