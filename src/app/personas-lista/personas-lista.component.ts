@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChatService } from '../chat/chat.service';
 
 @Component({
   selector: 'app-personas-lista',
@@ -10,5 +11,9 @@ export class PersonasListaComponent implements OnInit {
   public menssage?: string[] = [];
   ngOnInit(): void {
   }
+
+  constructor(
+    public chatService: ChatService,
+  ){}
 
 }
