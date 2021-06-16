@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonalChatComponent } from './personal-chat/personal-chat.component';
 import { PersonalChatInputComponent } from './personal-chat-input/personal-chat-input.component';
 import { PersonalChatMessageListComponent } from './personal-chat-message-list/personal-chat-message-list.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [

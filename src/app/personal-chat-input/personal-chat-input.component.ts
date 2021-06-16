@@ -1,11 +1,14 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { ChatService } from '../chat/chat.service';
+import { DataService } from '../data.service';
+
+// DataService 01
 
 @Component({
   selector: 'app-personal-chat-input',
   templateUrl: './personal-chat-input.component.html',
-  styleUrls: ['./personal-chat-input.component.css']
+  styleUrls: ['./personal-chat-input.component.css'],
 })
 export class PersonalChatInputComponent implements OnInit {
 

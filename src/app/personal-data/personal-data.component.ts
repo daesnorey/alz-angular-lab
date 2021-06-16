@@ -1,9 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { DataService } from '../data.service';
+
 @Component({
   selector: 'app-personal-data',
   templateUrl: './personal-data.component.html',
-  styleUrls: ['./personal-data.component.css']
+  styleUrls: ['./personal-data.component.css'],
+  providers: [
+    DataService,
+  ]
 })
 export class PersonalDataComponent {
 
@@ -19,7 +24,9 @@ export class PersonalDataComponent {
   @Output()
   public onValueChange!: EventEmitter<string>;
 
-  constructor() {
+  constructor(
+    private dataService: DataService,
+  ) {
     this.onValueChange = new EventEmitter();
   }
 
