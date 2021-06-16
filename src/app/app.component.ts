@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-lab';
   //Agregamos campos inicializados en el componente padre
+  /*
   public nombreComponentPadre?: string = "Sebastian";
   public apellidoComponentPadre?: string = "Vettel";
   public fechaNacimientoComponentPadre?: string = "1987-07-03";
+  */
   public arregloMensajes?: string[]=[];
 
   public adicionarMensajes(value:string){
@@ -19,6 +21,7 @@ export class AppComponent {
   }
 
   //Se crea un función donde se le da funcionalidad al evento
+  /*
   public changeNamePatern(value: string){
     this.nombreComponentPadre = value; 
   }
@@ -30,5 +33,5 @@ export class AppComponent {
   public changeDatePatern(value: string){
     this.fechaNacimientoComponentPadre = value; 
   }
-
+*/
 }
