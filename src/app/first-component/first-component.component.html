@@ -1,12 +1,10 @@
-<form (submit)="onMessageSubmited($event)">
-    <!-- <label for="fname">Nombre:</label><br>  
-    <input type="text" id="fname" name="fname" [(ngModel)]="name" (input)="onNameChange($event)"><br>
-    <label for="lname">Apellido:</label><br>
-    <input type="text" id="lname" name="lname" [(ngModel)]="lastname" (input)="onLastnameChange($event)"><br><br>
-    <label for="borndate">Fecha de Nacimiento:</label><br>
-    <input type="date" id="birthdate" name="birthdate" [(ngModel)]="birthdate" (input)="onBirthdateChange($event)"><br><br>    
-    <input type="submit" value="Submit"> -->
 
-    <label for="message">Mensaje:</label><br>
-    <input type="text" id="message" name="message" [(ngModel)]="message"><br>
+<form (submit)="onMessageSubmited()">  
+    <label for="fname">Nombre:</label><br>  
+    <input type="text" id="fname" name="fname" [(ngModel)]="name" required><br>
+    <label for="lname">Apellido:</label><br>
+    <input type="text" id="lname" name="lname" [(ngModel)]="lastname"><br><br>
+    <label for="borndate">Fecha de Nacimiento:</label><br>
+    <input type="date" id="birthdate" name="birthdate" [(ngModel)]="birthdate"><br><br>    
+    <input type="submit" value="Submit">
   </form>

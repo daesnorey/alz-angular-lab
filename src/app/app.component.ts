@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormService } from './service-form/form.service';
 
 
 @Component({
@@ -8,22 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-lab';
-  
-/*    parentName: string='Juan';
-   parentLastname: string='Ordóñez';
-   parentBirthdate: string='1982-07-04';
 
-   public onNameChangeParent (emmitedName: string){this.parentName = emmitedName}
-   public onLastnameChangeParent (emmitedLastname: string){this.parentLastname = emmitedLastname}
-   public onBirthdateChangeParent (emmitedBirthdate: string){this.parentBirthdate = emmitedBirthdate}
- */   
-  
-   public parentMessage: string ='';
-   public parentMessages: string[]=[];
-
-   public onMessageChangeParent(emmitedMessage: string){
-     this.parentMessage = emmitedMessage;     
-     this.parentMessages.push(emmitedMessage);
-    }
+//FORMULARIO
+   parentName!: string;
+   parentLastname!: string;
+   parentBirthdate!: string;
 }
 

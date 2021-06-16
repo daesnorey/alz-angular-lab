@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormService } from '../service-form/form.service';
 
 
 @Component({
@@ -7,38 +8,19 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./first-component.component.css']
 })
 export class FirstComponentComponent implements OnInit {
-/*   @Input () name?: string;
-  @Input () lastname?: string;
-  @Input () birthdate?: string;  
+  public name!: string;
+  public lastname!: string;
+  public birthdate!: string;
 
-  @Output() nameChanged!: EventEmitter<string>;
-  @Output() lastnameChanged!: EventEmitter<string>;
-  @Output() birthdateChanged!: EventEmitter<string>; */
-
-  message?: string;  
-  @Output() onMessageSubmit!: EventEmitter<string>;
-
-  constructor() {
-/*       this.nameChanged = new EventEmitter();
-      this.lastnameChanged = new EventEmitter();
-      this.birthdateChanged = new EventEmitter(); */
-      this.onMessageSubmit = new EventEmitter();
-   }
-   
-/*   public onNameChange(eve: any){
-    this.nameChanged.next(eve.target.value);
+   constructor(private formService: FormService) {
   }
-  public onLastnameChange(eve: any){
-    this.lastnameChanged.next(eve.target.value);
-  }
-  public onBirthdateChange(eve: any){
-    this.birthdateChanged.next(eve.target.value);
-  } */
 
-  public onMessageSubmited(eve: any){
-    this.onMessageSubmit.next(this.message);
-    console.log("emmiting --->"+ this.message)
-    this.message=''
+  //CHAT
+   public onMessageSubmited(){
+    this.formService.addMessage(this.name, this.lastname, this.birthdate);
+    this.name='';
+    this.lastname='';
+    this.birthdate='';    
   }
 
   ngOnInit(): void {

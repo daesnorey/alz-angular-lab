@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormService } from '../service-form/form.service';
 
 @Component({
   selector: 'app-second-component',
@@ -6,10 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./second-component.component.css']
 })
 export class SecondComponentComponent implements OnInit {
-  @Input() finalMessages?: string[];
-  finalMessage?: string;
   
-  constructor() { }
+  constructor(public formService: FormService) { }
 
   ngOnInit(): void {
   }
