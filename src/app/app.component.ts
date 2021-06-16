@@ -5,7 +5,9 @@ import { FormService } from './service-form/form.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [FormService]
+
 })
 export class AppComponent {
   title = 'angular-lab';
