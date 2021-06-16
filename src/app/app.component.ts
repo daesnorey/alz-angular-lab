@@ -9,7 +9,7 @@ export class AppComponent {
   
   title = 'my-appEveris';
 
-  /*public parentName?: String = "Juan Carlos" ;
+  public parentName?: String = "Juan Carlos" ;
   public parentLastName?: String = "Sanchez Solorzano" ;
   public parentBirthDate?: String = "1995-06-24" ;
 
@@ -23,7 +23,7 @@ export class AppComponent {
 
   public onChangeBirthDate(birthDate: string){
     this.parentBirthDate = birthDate;
-  } */
+  }
 
   public parentMessage: string ='';
   public parentMessages: string[]=[];

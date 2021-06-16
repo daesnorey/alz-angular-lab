@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChatsService } from '../chats/chats.service';
 
 @Component({
   selector: 'app-chat',
@@ -7,19 +8,30 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  message?: string;  
-  @Output() onMessageSubmit!: EventEmitter<string>;
+  public message: string = '';
 
-  constructor() {
-    this.onMessageSubmit = new EventEmitter();
-   }
+  constructor(
+    private chatservice: ChatsService
+  ){}
 
-  public onMessageSubmited(eve: any){
-    this.onMessageSubmit.next(this.message);
-    this.message=''
+  ngOnInit(): void{
+    this.clearMessage();
   }
 
-  ngOnInit(): void {
+  private clearMessage() {
+    this.message = '';
+  }
+
+  public onMessageSubmited(ev: Event) {
+    ev.preventDefault();
+    ev.stopImmediatePropagation();
+
+    if (!this.message) {
+      return;
+    }
+
+    this.chatservice.addMessage(this.message);
+    this.clearMessage();
   }
 
 }

@@ -1,10 +1,10 @@
-<!-- {{parentName}}, {{parentLastName}} nació el día: {{parentBirthDate}}
+{{parentName}}, {{parentLastName}} nació el día: {{parentBirthDate}}
 
 <app-test [name]="parentName" [lastName]="parentLastName" [birthDate]="parentBirthDate" (valueChangedName)="onChangeName($event)" (valueChangedLastName)="onChangeLastName($event)" (valueChangedBirthDate)="onChangeBirthDate($event)">
-</app-test> -->
+</app-test>
 
-<app-chat (onMessageSubmit)="onMessageChangeParent($event)">
+<app-chat>
 </app-chat>
 
-<app-mensajes [finalMessages]="parentMessages">
+<app-mensajes>
 </app-mensajes>
