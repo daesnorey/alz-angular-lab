@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChatService } from '../chat/chat-service';
 
 @Component({
   selector: 'app-nuevo-componente',
@@ -11,7 +12,7 @@ export class NuevoComponenteComponent implements OnInit {
     @Input() public apellidoComponentHijo?: string;
     @Input() public fechaNacimientoComponentHijo?: string;
   */
-  @Input() public mensajeEscrito?: string;
+  public mensajeEscrito: string = "";
 
   // Se crea variable que va ser igual a un evento
   /* @Output() public changeName!: EventEmitter<string>;
@@ -20,8 +21,9 @@ export class NuevoComponenteComponent implements OnInit {
   */
   @Output() public mensajeRecibido!: EventEmitter<string>;
 
-  //Se debe crear un constructor donde se realiza una instancia de la variale creada
-  constructor() {
+  // Realizo la inyección correspondiente.
+  constructor(private chatService: ChatService) {
+    //Se debe crear un constructor donde se realiza una instancia de la variale creada
     /*
     this.changeName = new EventEmitter();
     this.changeLastName = new EventEmitter();
@@ -31,7 +33,9 @@ export class NuevoComponenteComponent implements OnInit {
   }
 
   public enviarMensaje() {
-    this.mensajeRecibido.next(this.mensajeEscrito);
+    //this.mensajeRecibido.next(this.mensajeEscrito);
+    //con mi service vengo y llamo al metodo y le envio el mensaje
+    this.chatService.adicionarMensajes(this.mensajeEscrito)
     console.log("Aca escribi: " + this.mensajeEscrito)
     this.mensajeEscrito = "";
   }
