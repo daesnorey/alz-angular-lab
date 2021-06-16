@@ -7,13 +7,13 @@ import { ChatService } from '../chat/chat.service';
   styleUrls: ['./personas-lista.component.css']
 })
 export class PersonasListaComponent implements OnInit {
-  @Input()
+  
   public menssage?: string[] = [];
   ngOnInit(): void {
   }
 
   constructor(
-    public chatService: ChatService,
+    public chatService: ChatService
   ){}
 
 }
