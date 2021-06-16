@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { ChatService } from './chat/chat.service';
 import { FormularioServicioService } from './formulario-servicio/formulario-servicio.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [FormularioServicioService, ChatService]
 })
 export class AppComponent {
 

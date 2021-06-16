@@ -1,10 +1,7 @@
-<div class="row">
     <div class="container">
       <h1>Formulario </h1>
       <form >
         <div class="col-lg-3 ">
-
-
           <label for="name">Nombre </label> <input type="text" class="form-control" placeholder="nombre" [value]="nombre" [(ngModel)]="nombre" name="nombre" (input)= "onChange()"> <br>
           <label for="name">Apellido </label> <input type="text" class="form-control" placeholder="apellido" [value]="apellido"  [(ngModel)]="apellido" name="apellido" (input)= "onChange()"> <br>
           <label for="fecha">Fecha Nacimiento </label> <input type="date" class="form-control" name="fecha" [value]="fechaNacimiento"  [(ngModel)]="fechaNacimiento" name="fecha" (input)= "onChange()"> <br>
@@ -21,8 +18,8 @@
           <input type="submit" class="btn btn-primary" value="Enviar"/> -->
         </div>
       </form>
+      <br>  
+      <div>{{formularioServicioService.nombre}}  {{apellido}}  nació en : {{fechaNacimiento}} </div>
     </div>
-  </div>
-
-  <div>{{formularioServicioService.nombre}}  {{apellido}}  nació en : {{fechaNacimiento}} </div>
+  
   

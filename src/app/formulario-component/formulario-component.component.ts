@@ -4,7 +4,7 @@ import { FormularioServicioService } from '../formulario-servicio/formulario-ser
 @Component({
   selector: 'app-formulario-component',
   templateUrl: './formulario-component.component.html',
-  styleUrls: ['./formulario-component.component.css']
+  styleUrls: ['./formulario-component.component.css'],
 })
 export class FormularioComponentComponent implements OnInit {
 
@@ -22,12 +22,18 @@ export class FormularioComponentComponent implements OnInit {
   /* @Output()
   public onValueChange!:EventEmitter<string>; */
 
-  constructor(public formularioServicioService : FormularioServicioService){
-/*     this.onValueChange = new EventEmitter(); */     
+ /*  constructor(public formularioServicioService : FormularioServicioService){
+       this.onValueChange = new EventEmitter();      
        this.nombre = formularioServicioService.nombre;
        this.apellido = formularioServicioService.apellido;
        this.fechaNacimiento = formularioServicioService.fechaNacimiento;
-  } 
+  }  */
+
+  constructor(public formularioServicioService : FormularioServicioService){
+    this.nombre = formularioServicioService.nombre;
+    this.apellido = formularioServicioService.apellido;
+    this.fechaNacimiento = formularioServicioService.fechaNacimiento;
+}   
 
   /* public onChange(ev: any){
     this.onValueChange.next(ev.target.value);
