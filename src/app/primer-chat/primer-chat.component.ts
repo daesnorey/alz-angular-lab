@@ -10,9 +10,10 @@ export class PrimerChatComponent implements OnInit {
 
   public message?: string;
   
-  constructor(private chatService : ChatService) {
+  constructor(private chatService : ChatService){
     
   }
+   
 
   ngOnInit(): void {
   }

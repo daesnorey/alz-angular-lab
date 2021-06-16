@@ -9,9 +9,9 @@ import { ChatService } from '../chat/chat.service';
 export class SegundoChatComponent implements OnInit {
 
   public messages: string[] = [];
-
-  constructor(public chatService : ChatService) { }
-
+  constructor(public chatService: ChatService){
+    
+  }
   ngOnInit(): void {
   }
 
