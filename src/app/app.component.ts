@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormularioServicioService } from './formulario-servicio/formulario-servicio.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-lab';
+
+
+  
+ /*  public parentMensaje : string  = "";
+  public parentMensajes : string[] = [];
+
+ 
+  public onChange(value : string){
+    this.parentMensaje = value;
+    this.parentMensajes.push(this.parentMensaje);
+  } */
+
+  constructor(public formularioServicioService: FormularioServicioService){}
+ 
+  public parentNombre : string = "Jorge";
+  public parentApellido : string = "Quintero";
+  public parentFechaNacimiento : string = "1990-01-01";
+
+
 }

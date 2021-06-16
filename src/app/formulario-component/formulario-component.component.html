@@ -3,19 +3,26 @@
       <h1>Formulario </h1>
       <form >
         <div class="col-lg-3 ">
-      <!--     <label for="name">Nombre </label> <input type="text" class="form-control" name="nombre" placeholder="nombre" [(ngModel)]="nombre"> <br>
-          <label for="name">Apellido </label> <input type="text" class="form-control" name="nombre" placeholder="apellido" [(ngModel)]="apellido"> <br>
-          <label for="fecha">Fecha Nacimiento </label> <input type="date" class="form-control" name="fecha" [(ngModel)]="fechaNacimiento"> <br>
-          <input type="submit" class="btn btn-primary" value="Enviar"/> -->
 
-          <label for="name">Nombre </label> <input type="text" class="form-control"  placeholder="nombre" [value]="nombre" (change)="onNameChanged($event)"> <br>
-          <label for="name">Apellido </label> <input type="text" class="form-control" placeholder="apellido" [value]="apellido" (change)="onApellidoChanged($event)"> <br>
-          <label for="fecha">Fecha Nacimiento </label> <input type="date" class="form-control"  [value]="fechaNacimiento" (change)="onFechaNacimientoChanged($event)"> <br>
+
+          <label for="name">Nombre </label> <input type="text" class="form-control" placeholder="nombre" [value]="nombre" [(ngModel)]="nombre" name="nombre" (input)= "onChange()"> <br>
+          <label for="name">Apellido </label> <input type="text" class="form-control" placeholder="apellido" [value]="apellido"  [(ngModel)]="apellido" name="apellido" (input)= "onChange()"> <br>
+          <label for="fecha">Fecha Nacimiento </label> <input type="date" class="form-control" name="fecha" [value]="fechaNacimiento"  [(ngModel)]="fechaNacimiento" name="fecha" (input)= "onChange()"> <br>
           <input type="submit" class="btn btn-primary" value="Enviar"/>
+
+          <!-- <label for="name">Nombre </label> <input type="text" class="form-control" placeholder="nombre" [value]="nombre" [(ngModel)]="nombre" name="nombre" (input)="onChange($event)"> <br>
+          <label for="name">Apellido </label> <input type="text" class="form-control" placeholder="apellido" [value]="apellido"  [(ngModel)]="apellido" name="apellido"> <br>
+          <label for="fecha">Fecha Nacimiento </label> <input type="date" class="form-control" name="fecha" [value]="fechaNacimiento"  [(ngModel)]="fechaNacimiento" name="fecha"> <br>
+          <input type="submit" class="btn btn-primary" value="Enviar"/>
+ -->
+          <!-- <label for="name">Nombre </label> <input type="text" class="form-control"  placeholder="nombre" [value]="nombre" (input)="onNameChanged($event)"> <br>
+          <label for="name">Apellido </label> <input type="text" class="form-control" placeholder="apellido" [value]="apellido" (input)="onApellidoChanged($event)"> <br>
+          <label for="fecha">Fecha Nacimiento </label> <input type="date" class="form-control"  [value]="fechaNacimiento" (input)="onFechaNacimientoChanged($event)"> <br>
+          <input type="submit" class="btn btn-primary" value="Enviar"/> -->
         </div>
       </form>
     </div>
   </div>
 
-  <div>{{nombre}}  {{apellido}}  nació en : {{fechaNacimiento}} </div>
+  <div>{{formularioServicioService.nombre}}  {{apellido}}  nació en : {{fechaNacimiento}} </div>
   

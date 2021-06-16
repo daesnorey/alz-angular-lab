@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { FormularioServicioService } from '../formulario-servicio/formulario-servicio.service';
 
 @Component({
   selector: 'app-formulario-component',
@@ -7,24 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponentComponent implements OnInit {
 
-  constructor() { }
 
   ngOnInit(): void {
   }
 
-  public nombre : string  = "Ivan";
-  public apellido : string  = "Quintero";
-  public fechaNacimiento : string  = "1990-01-01";
+  /* @Input() */
+  public nombre : string;
+  /* @Input() */
+  public apellido : string;
+  /* @Input() */
+  public fechaNacimiento : string;
 
+  /* @Output()
+  public onValueChange!:EventEmitter<string>; */
 
-  public onNameChanged(ev : any){
-    this.nombre = ev.target.value;
-  }
-  public onApellidoChanged(ev : any){
-    this.apellido = ev.target.value;
-  }
-  public onFechaNacimientoChanged(ev : any){
-    this.fechaNacimiento = ev.target.value;
-  }
+  constructor(public formularioServicioService : FormularioServicioService){
+/*     this.onValueChange = new EventEmitter(); */     
+       this.nombre = formularioServicioService.nombre;
+       this.apellido = formularioServicioService.apellido;
+       this.fechaNacimiento = formularioServicioService.fechaNacimiento;
+  } 
+
+  /* public onChange(ev: any){
+    this.onValueChange.next(ev.target.value);
+  } */
+
+  /* public onChange(){
+    this.onValueChange.next(ev.target.value);
+  } */
+
+   public onChange(){
+    this.formularioServicioService.cambiarDatos(this.nombre,this.apellido,this.fechaNacimiento);
+   }
 
 }
