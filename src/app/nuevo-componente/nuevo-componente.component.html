@@ -1,4 +1,4 @@
-<!-- <p>¡Nuevo Componente!</p>
+<p>¡Nuevo Componente!</p>
 <input placeholder="Nombre" type="text" [(ngModel)]="nombreComponentHijo" (input)="executeChangeName($event)">
 <br>
 <input placeholder="Apellido" type="text" [(ngModel)]="apellidoComponentHijo" (input)="executeChangeLastName($event)">
@@ -6,9 +6,3 @@
 <label>Fecha de nacimiento: </label>
 <input type="date" [(ngModel)]="fechaNacimientoComponentHijo" (input)="executeChangeDate($event)">
 <p>Bienvenido {{nombreComponentHijo}} {{apellidoComponentHijo}}</p> {{fechaNacimientoComponentHijo}}
--->
-<h1>¡Hagamos un chat!</h1>
-<form (submit)="enviarMensaje()">
-<input type="text" name="txt_chat" [(ngModel)]="mensajeEscrito">
-</form>
-{{mensajeEscrito}}
