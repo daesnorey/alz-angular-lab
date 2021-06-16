@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-lab';
+  title = 'Capacitación Angular';
+  private name = 'Daniel';
+
+  constructor(){
+
+  }
+  public getName(){
+    return this.name;
+  }
+
 }
