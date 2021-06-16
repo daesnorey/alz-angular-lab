@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
+import { FormComponent } from './form-parent/form/form.component';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class FormService {
   public data!: Array<{ name: string; lastName: string; birthDate: string }>;
   constructor() {}

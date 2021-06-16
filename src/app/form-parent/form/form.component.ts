@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormService } from '../form.service';
+import { FormService } from '../../form.service';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
   //  public messagesP: string[] = [];
@@ -12,9 +12,7 @@ export class FormComponent implements OnInit {
   public lastName!: string;
   public birthDate!: string;
 
-  constructor(
-    private formService: FormService
-  ) {}
+  constructor(private formService: FormService) {}
 
   ngOnInit(): void {}
 

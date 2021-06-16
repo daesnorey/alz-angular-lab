@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
+import { ChatComponent } from './chat-parent/chat/chat.component';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ChatService {
 public messages: string[] = [];
 

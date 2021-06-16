@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormService } from '../form.service';
+import { FormService } from '../../form.service';
 
 @Component({
   selector: 'app-form-data',
@@ -7,12 +7,7 @@ import { FormService } from '../form.service';
   styleUrls: ['./form-data.component.css']
 })
 export class FormDataComponent implements OnInit {
+  constructor(public formService: FormService) {}
 
-  constructor(
-    public formService: FormService
-  ) { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
