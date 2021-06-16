@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Persona } from './model/persona';
+import { FormularioService } from './services/formulario.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [FormularioService]
 })
 export class AppComponent {
   title = 'alz-angular-lab';

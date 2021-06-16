@@ -4,7 +4,8 @@ import { FormularioService } from 'src/app/services/formulario.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
+  providers: []
 })
 export class FormComponent implements OnInit {
 

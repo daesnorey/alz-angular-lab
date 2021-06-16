@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class FormularioService {
 
   private persons : any[] = []
@@ -17,7 +15,7 @@ export class FormularioService {
   /**
    * getPersons
    */
-   public getPersons() {
+  public getPersons() {
     return this.persons;
   }
 
