@@ -10,19 +10,27 @@ export class NuevoComponenteComponent implements OnInit {
   @Input() public nombreComponentHijo?: string;
   @Input() public apellidoComponentHijo?: string;
   @Input() public fechaNacimientoComponentHijo?: string;
+  @Input() public mensajeEscrito?: string;
 
   // Se crea variable que va ser igual a un evento
   @Output() public changeName!: EventEmitter<string>;
   @Output() public changeLastName!: EventEmitter<string>;
   @Output() public changeDate!: EventEmitter<string>;
+  @Output() public mensajeRecibido!:  EventEmitter<string>;
 
   //Se debe crear un constructor donde se realiza una instancia de la variale creada
   constructor() { 
     this.changeName = new EventEmitter();
     this.changeLastName = new EventEmitter();
     this.changeDate = new EventEmitter();
+    this.mensajeRecibido = new EventEmitter();
   }
 
+  public enviarMensaje(){
+    this.mensajeRecibido.next(this.mensajeEscrito);
+    console.log("Aca escribi: " + this.mensajeEscrito)
+    this.mensajeEscrito = "";
+  }
   //Se crea un función donde se le da funcionalidad al evento
   public executeChangeName(ev:any){
     this.changeName.next(ev.target.value);

@@ -11,6 +11,12 @@ export class AppComponent {
   public nombreComponentPadre?: string = "Sebastian";
   public apellidoComponentPadre?: string = "Vettel";
   public fechaNacimientoComponentPadre?: string = "1987-07-03";
+  public arregloMensajes?: string[]=[];
+
+  public adicionarMensajes(value:string){
+    this.arregloMensajes?.push(value)
+    console.log("Mensaje adicionado al arreglo "+value)
+  }
 
   //Se crea un función donde se le da funcionalidad al evento
   public changeNamePatern(value: string){

@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NuevoComponenteComponent } from './nuevo-componente/nuevo-componente.component';
+import { NuevoComponenteHijoComponent } from './nuevo-componente-hijo/nuevo-componente-hijo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NuevoComponenteComponent
+    NuevoComponenteComponent,
+    NuevoComponenteHijoComponent
   ],
   imports: [
     BrowserModule,

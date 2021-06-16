@@ -7,7 +7,15 @@
  (changeName)="changeNamePatern($event)"
  (changeLastName)="changeLastNamePatern($event)"
  (changeDate)="changeDatePatern($event)"
+ (mensajeRecibido)="adicionarMensajes($event)"
   >
 </app-nuevo-componente>
+<app-nuevo-componente-hijo
+[arregloMensajesMostrar]="arregloMensajes"
+>
+</app-nuevo-componente-hijo>
 <br><br>
+
+<!--
 ¡Hola {{nombreComponentPadre}}! {{apellidoComponentPadre}}, esta seleccionada la fecha {{fechaNacimientoComponentPadre}}
+-->
