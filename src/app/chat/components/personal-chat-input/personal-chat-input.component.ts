@@ -1,9 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-import { ChatService } from '../chat/chat.service';
-import { DataService } from '../data.service';
-
-// DataService 01
+import { ChatService } from '../../services/chat/chat.service';
 
 @Component({
   selector: 'app-personal-chat-input',
