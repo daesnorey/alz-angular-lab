@@ -1,12 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ChatService } from '../chat/chat-service';
-import { DatosService } from '../data/datos.service';
+import { ChatService } from '../Services/chat/chat-service';
 
 @Component({
   selector: 'app-nuevo-componente',
   templateUrl: './nuevo-componente.component.html',
-  styleUrls: ['./nuevo-componente.component.css'],
-  providers:[ChatService]
+  styleUrls: ['./nuevo-componente.component.css']
 })
 export class NuevoComponenteComponent implements OnInit {
   //Con el decorador Input le estoy diciendo que mi atributo es de entrada
