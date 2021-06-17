@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ChatService } from './chat/chat.service';
-import { FormularioServicioService } from './formulario-servicio/formulario-servicio.service';
+import { ChatService } from './chat/servicios/chat.service';
+import { FormularioServicioService } from './formulario/servicios/formulario-servicio/formulario-servicio.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,7 @@ import { FormularioServicioService } from './formulario-servicio/formulario-serv
 })
 export class AppComponent {
 
-
-  
+ 
  /*  public parentMensaje : string  = "";
   public parentMensajes : string[] = [];
 
