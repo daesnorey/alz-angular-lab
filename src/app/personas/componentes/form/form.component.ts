@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormularioService } from 'src/app/services/formulario.service';
+import { FormularioService } from 'src/app/personas/services/formulario.service';
 
 @Component({
   selector: 'app-form',
