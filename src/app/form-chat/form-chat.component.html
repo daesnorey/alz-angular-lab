@@ -1,0 +1,16 @@
+<form (submit)="(onDataSubmited)($event)">
+    <label for="name">Nombre: </label><br>
+    <input type="text" id="name" name="name" [(ngModel)]="name"><br>
+</form>
+
+<form (submit)="(onDataSubmited)($event)">
+    <label for="lastname">Apellido: </label><br>
+    <input type="text" name="lastname" id="lastname" [(ngModel)]="lastname"><br>
+</form>
+<br>
+
+<h2>Nombres:</h2><br>
+<p *ngFor="let finalName of formchat.name">{{finalName}}</p><br>
+
+<h2>Apellidos:</h2><br>
+<p *ngFor="let finalLastname of formchat.lastname">{{finalLastname}}</p><br>

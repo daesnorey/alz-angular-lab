@@ -24,12 +24,4 @@ export class AppComponent {
   public onChangeBirthDate(birthDate: string){
     this.parentBirthDate = birthDate;
   }
-
-  public parentMessage: string ='';
-  public parentMessages: string[]=[];
-
-  public onMessageChangeParent(emmitedMessage: string){
-    this.parentMessage = emmitedMessage;     
-    this.parentMessages.push(emmitedMessage);
-   }
 }
