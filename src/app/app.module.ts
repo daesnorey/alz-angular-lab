@@ -8,7 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppComponent } from './app.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ChatModule } from './chat/chat.module';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ChatModule } from './chat/chat.module';
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    ChatModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

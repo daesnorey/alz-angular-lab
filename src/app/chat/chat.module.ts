@@ -10,6 +10,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { TestComponent } from './components/test/test.component';
+import { ChatRoutingModule } from './chat-routing.module';
+import { ChatTestComponent } from './components/chat-test/chat-test.component';
+import { ChatWrapperComponent } from './components/chat-wrapper/chat-wrapper.component';
+import { Test1Component } from './components/test1/test1.component';
+import { Test2Component } from './components/test2/test2.component';
 
 @NgModule({
   declarations: [
@@ -17,20 +22,22 @@ import { TestComponent } from './components/test/test.component';
     PersonalChatInputComponent,
     PersonalChatMessageListComponent,
     TestComponent,
+    ChatTestComponent,
+    ChatWrapperComponent,
+    Test1Component,
+    Test2Component,
   ],
   imports: [
     CommonModule,
     MatButtonModule,
     MatIconModule,
     FormsModule,
+    ChatRoutingModule,
   ],
   providers: [
     ChatService,
   ],
   exports: [
-    PersonalChatComponent,
-    PersonalChatInputComponent,
-    PersonalChatMessageListComponent,
   ]
 })
 export class ChatModule { }
