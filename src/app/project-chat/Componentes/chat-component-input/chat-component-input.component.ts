@@ -17,6 +17,7 @@ export class ChatComponentInputComponent implements OnInit {
     console.log("Aca escribi: " + this.mensajeEscrito)
     this.mensajeEscrito = "";
   }
+
   ngOnInit(): void {
   }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ChatService } from '../../Services/chat/chat-service';
 
 @Component({
   selector: 'app-component-parent-chat',
@@ -14,10 +13,10 @@ export class ComponentParentChatComponent implements OnInit {
     console.log("Mensaje adicionado al arreglo "+value)
   }
 
-  
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

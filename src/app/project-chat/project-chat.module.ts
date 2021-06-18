@@ -1,24 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChatComponentInputComponent } from './chat-component-input/chat-component-input.component';
-import { ComponentParentChatComponent } from './component-parent-chat/component-parent-chat.component';
-import { NuevoComponenteHijoComponent } from './nuevo-componente-hijo/nuevo-componente-hijo.component';
 import { FormsModule } from '@angular/forms';
+import { ChatComponentInputComponent } from './Componentes/chat-component-input/chat-component-input.component';
+import { ComponentParentChatComponent } from './Componentes/component-parent-chat/component-parent-chat.component';
+import { NuevoComponenteComponent } from '../nuevo-componente/nuevo-componente.component';
+import { ChatService } from './Services/chat/chat-service';
+import { NuevoComponenteHijoComponent } from './Componentes/nuevo-componente-hijo/nuevo-componente-hijo.component';
 
 @NgModule({
   declarations: [
-    NuevoComponenteHijoComponent,
+    ChatComponentInputComponent,
     ComponentParentChatComponent,
-    ChatComponentInputComponent
+    NuevoComponenteHijoComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
   ],
   exports:[
-    NuevoComponenteHijoComponent,
+    ChatComponentInputComponent,
     ComponentParentChatComponent,
-    ChatComponentInputComponent
+    NuevoComponenteHijoComponent,
+  ],
+  providers:[
+    ChatService
   ]
 })
 export class ProjectChatModule { }
