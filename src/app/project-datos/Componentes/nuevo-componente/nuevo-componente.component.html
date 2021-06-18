@@ -1,0 +1,9 @@
+<p>¡Nuevo Componente!</p>
+<input placeholder="Nombre" type="text" [(ngModel)]="nombreComponentHijo" (input)="executeChangeName($event)">
+<br>
+<input placeholder="Apellido" type="text" [(ngModel)]="apellidoComponentHijo" (input)="executeChangeLastName($event)">
+<br>
+<label>Fecha de nacimiento: </label> 
+<input type="date" [(ngModel)]="fechaNacimientoComponentHijo" (input)="executeChangeDate($event)">
+<p>Bienvenido {{nombreComponentHijo}} {{apellidoComponentHijo}}</p> {{fechaNacimientoComponentHijo}} 
+  
