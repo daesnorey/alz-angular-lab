@@ -4,22 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
-import { PersonasComponent } from './personas/personas.component';
-import { PersonasListaComponent } from './personas-lista/personas-lista.component';
-import { ChatComponent } from './chat/chat.component';
+import { ChatModule } from './chats/chat.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    PersonasComponent,
-    PersonasListaComponent,
-    ChatComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ChatModule
   ],
   providers: [],
   bootstrap: [AppComponent]
