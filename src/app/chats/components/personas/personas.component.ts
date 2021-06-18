@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { ChatService } from '../chat/chat.service';
-import { DataService } from '../data.service';
+import { Component, Input, OnInit} from '@angular/core';
+import { ChatService } from 'src/app/chats/services/chat/chat.service';
+
 
 
 @Component({
