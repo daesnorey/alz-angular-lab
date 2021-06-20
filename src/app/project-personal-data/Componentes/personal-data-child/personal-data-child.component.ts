@@ -8,16 +8,14 @@ import { DatosService } from '../../Services/data/datos.service';
 })
 export class PersonalDataChildComponent implements OnInit {
   //Con el decorador Input le estoy diciendo que mi atributo es de entrada
-  /* 
-    @Input() public nombreComponentHijo?: string;
+  /* @Input() public nombreComponentHijo?: string;
     @Input() public apellidoComponentHijo?: string;
     @Input() public fechaNacimientoComponentHijo?: string;
 
   // Se crea variable que va ser igual a un evento
      @Output() public changeName!: EventEmitter<string>;
      @Output() public changeLastName!: EventEmitter<string>;
-     @Output() public changeDate!: EventEmitter<string>;
-*/
+     @Output() public changeDate!: EventEmitter<string>; */
     public namePersonalData?: string;
     public lastNamePersonalData?: string;
     public datePersonalData?: string;
