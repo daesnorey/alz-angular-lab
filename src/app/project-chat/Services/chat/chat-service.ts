@@ -5,9 +5,9 @@ export class ChatService {
 
   public mensajesAlmacenados: string[] = [];
 
-public adicionarMensajes(mensaje:string){
+  public adicionarMensajes(mensaje: string) {
     this.mensajesAlmacenados.push(mensaje);
-    console.log("Mensaje agregado: "+ this.mensajesAlmacenados)
+    console.log("Mensaje agregado: " + this.mensajesAlmacenados)
   }
 
   constructor() { }

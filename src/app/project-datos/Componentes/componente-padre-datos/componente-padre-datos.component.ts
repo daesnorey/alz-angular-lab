@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from '../../Services/data/datos.service';
 
 @Component({
   selector: 'app-componente-padre-datos',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentePadreDatosComponent implements OnInit {
    //Agregamos campos inicializados en el componente padre
+   /*
    public nombreComponentPadre?: string = "Sebastian";
    public apellidoComponentPadre?: string = "Vettel";
    public fechaNacimientoComponentPadre?: string = "1987-07-03";
@@ -23,7 +25,8 @@ export class ComponentePadreDatosComponent implements OnInit {
    public changeDatePatern(value: string){
      this.fechaNacimientoComponentPadre = value; 
    }
-  constructor() { }
+   */
+  constructor(private datosService : DatosService) { }
 
   ngOnInit(): void {
   }

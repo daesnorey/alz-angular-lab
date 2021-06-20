@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ChatService } from '../../../project-chat/Services/chat/chat-service';
+import { DatosService } from '../../Services/data/datos.service';
 
 @Component({
   selector: 'app-nuevo-componente',
@@ -8,6 +8,7 @@ import { ChatService } from '../../../project-chat/Services/chat/chat-service';
 })
 export class NuevoComponenteComponent implements OnInit {
   //Con el decorador Input le estoy diciendo que mi atributo es de entrada
+  /* 
     @Input() public nombreComponentHijo?: string;
     @Input() public apellidoComponentHijo?: string;
     @Input() public fechaNacimientoComponentHijo?: string;
@@ -16,15 +17,33 @@ export class NuevoComponenteComponent implements OnInit {
      @Output() public changeName!: EventEmitter<string>;
      @Output() public changeLastName!: EventEmitter<string>;
      @Output() public changeDate!: EventEmitter<string>;
-
+*/
+    public namePersonalData?: string;
+    public lastNamePersonalData?: string;
+    public datePersonalData?: string;
   // Realizo la inyección correspondiente.
-  constructor(private chatService: ChatService) {
+  constructor(public datosService: DatosService) {
     //Se debe crear un constructor donde se realiza una instancia de la variale creada
-    this.changeName = new EventEmitter();
+    /*this.changeName = new EventEmitter();
     this.changeLastName = new EventEmitter();
     this.changeDate = new EventEmitter();
+    */
+  }
+  public executeChangeName() {
+    this.datosService.changeName(this.namePersonalData!);
+    console.log("Valor escritom en campo nombre: " + this.namePersonalData);
   }
 
+  public executeChangeLastName() {
+    this.datosService.changeLastName(this.lastNamePersonalData!);
+    console.log("Valor escrito en campo apellido: " + this.namePersonalData);
+  }
+
+  public executeChangeDate() {
+    this.datosService.changeDate(this.datePersonalData!);
+    console.log("Valor escrito en campo fecha: " + this.namePersonalData);
+  }
+  /*
   //Se crea un función donde se le da funcionalidad al evento
   public executeChangeName(ev: any) {
     this.changeName.next(ev.target.value);
@@ -38,7 +57,7 @@ export class NuevoComponenteComponent implements OnInit {
   public executeChangeDate(ev: any) {
     this.changeDate.next(ev.target.value);
   }
-
+  */
   ngOnInit(): void {
   }
 

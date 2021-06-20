@@ -4,16 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ProjectChatModule } from './project-chat/project-chat.module';
+import { ProjectDatosModule } from './project-datos/project-datos.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
- 
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ProjectChatModule
+    ProjectChatModule,
+    ProjectDatosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
