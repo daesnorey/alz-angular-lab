@@ -3,10 +3,10 @@ import { ChatService } from '../../Services/chat/chat-service';
 
 @Component({
   selector: 'app-chat-component-input',
-  templateUrl: './chat-component-input.component.html',
-  styleUrls: ['./chat-component-input.component.css']
+  templateUrl: './chat-input.component.html',
+  styleUrls: ['./chat-input.component.css']
 })
-export class ChatComponentInputComponent implements OnInit {
+export class ChatInputComponent implements OnInit {
 
   public mensajeEscrito: string = "";
   constructor(private chatService: ChatService) {

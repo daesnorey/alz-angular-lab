@@ -3,10 +3,10 @@ import { DatosService } from '../../Services/data/datos.service';
 
 @Component({
   selector: 'app-personal-data-hijo',
-  templateUrl: './personal-data-hijo.component.html',
-  styleUrls: ['./personal-data-hijo.component.css']
+  templateUrl: './personal-data-child.component.html',
+  styleUrls: ['./personal-data-child.component.css']
 })
-export class NuevoComponenteComponent implements OnInit {
+export class PersonalDataChildComponent implements OnInit {
   //Con el decorador Input le estoy diciendo que mi atributo es de entrada
   /* 
     @Input() public nombreComponentHijo?: string;

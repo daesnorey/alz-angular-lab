@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentParentChatComponent } from './component-parent-chat.component';
+import { ChatParentComponent } from './chat-parent.component';
 
 describe('ComponentParentChatComponent', () => {
-  let component: ComponentParentChatComponent;
-  let fixture: ComponentFixture<ComponentParentChatComponent>;
+  let component: ChatParentComponent;
+  let fixture: ComponentFixture<ChatParentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComponentParentChatComponent ]
+      declarations: [ ChatParentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComponentParentChatComponent);
+    fixture = TestBed.createComponent(ChatParentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

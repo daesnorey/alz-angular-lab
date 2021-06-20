@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NuevoComponenteHijoComponent } from './nuevo-componente-hijo.component';
+import { ChatOutputComponent } from './chat-output.component';
 
 describe('NuevoComponenteHijoComponent', () => {
-  let component: NuevoComponenteHijoComponent;
-  let fixture: ComponentFixture<NuevoComponenteHijoComponent>;
+  let component: ChatOutputComponent;
+  let fixture: ComponentFixture<ChatOutputComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NuevoComponenteHijoComponent ]
+      declarations: [ ChatOutputComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NuevoComponenteHijoComponent);
+    fixture = TestBed.createComponent(ChatOutputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

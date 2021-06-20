@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { ComponentePadreDatosComponent } from './Componentes/personal-data-parent/personal-data-parent.component';
-import { NuevoComponenteComponent } from './Componentes/personal-data-hijo/personal-data-hijo.component';
+import { PersonalDataChildComponent } from './Componentes/personal-data-child/personal-data-child.component';
+import { PersonalDataPaternComponent } from './Componentes/personal-data-parent/personal-data-parent.component';
 import { DatosService } from './Services/data/datos.service';
 
 @NgModule({
   declarations: [
-    ComponentePadreDatosComponent,
-    NuevoComponenteComponent
+    PersonalDataChildComponent,
+    PersonalDataPaternComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +17,7 @@ import { DatosService } from './Services/data/datos.service';
     FormsModule
   ],
   exports:[
-    ComponentePadreDatosComponent
+    PersonalDataPaternComponent
   ],
   providers:[
     DatosService

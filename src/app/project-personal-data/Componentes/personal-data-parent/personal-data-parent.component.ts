@@ -6,7 +6,7 @@ import { DatosService } from '../../Services/data/datos.service';
   templateUrl: './personal-data-parent.component.html',
   styleUrls: ['./personal-data-parent.component.css']
 })
-export class ComponentePadreDatosComponent implements OnInit {
+export class PersonalDataPaternComponent implements OnInit {
    //Agregamos campos inicializados en el componente padre
    /*
    public nombreComponentPadre?: string = "Sebastian";

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentePadreDatosComponent } from './componente-padre-datos.component';
+import { PersonalDataPaternComponent } from './personal-data-parent.component';
 
 describe('ComponentePadreDatosComponent', () => {
-  let component: ComponentePadreDatosComponent;
-  let fixture: ComponentFixture<ComponentePadreDatosComponent>;
+  let component: PersonalDataPaternComponent;
+  let fixture: ComponentFixture<PersonalDataPaternComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComponentePadreDatosComponent ]
+      declarations: [ PersonalDataPaternComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComponentePadreDatosComponent);
+    fixture = TestBed.createComponent(PersonalDataPaternComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

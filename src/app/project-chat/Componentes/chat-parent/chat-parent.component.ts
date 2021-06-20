@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-component-parent-chat',
-  templateUrl: './component-parent-chat.component.html',
-  styleUrls: ['./component-parent-chat.component.css']
+  templateUrl: './chat-parent.component.html',
+  styleUrls: ['./chat-parent.component.css']
 })
-export class ComponentParentChatComponent implements OnInit {
+export class ChatParentComponent implements OnInit {
   public arregloMensajes?: string[]=[];
 
   public adicionarMensajes(value:string){

@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RoutingModule } from './app-routing-module';
 
 import { AppComponent } from './app.component';
 import { ProjectChatModule } from './project-chat/project-chat.module';
-import { ProjectDatosModule } from './project-datos/project-datos.module';
+import { ProjectDatosModule } from './project-personal-data/project-datos.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProjectDatosModule } from './project-datos/project-datos.module';
     BrowserModule,
     FormsModule,
     ProjectChatModule,
-    ProjectDatosModule
+    ProjectDatosModule,
+    RoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
