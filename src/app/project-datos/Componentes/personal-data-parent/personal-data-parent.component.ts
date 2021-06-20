@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../../Services/data/datos.service';
 
 @Component({
-  selector: 'app-componente-padre-datos',
-  templateUrl: './componente-padre-datos.component.html',
-  styleUrls: ['./componente-padre-datos.component.css']
+  selector: 'app-personal-data-parent',
+  templateUrl: './personal-data-parent.component.html',
+  styleUrls: ['./personal-data-parent.component.css']
 })
 export class ComponentePadreDatosComponent implements OnInit {
    //Agregamos campos inicializados en el componente padre

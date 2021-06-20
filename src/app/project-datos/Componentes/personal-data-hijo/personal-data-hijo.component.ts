@@ -2,9 +2,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DatosService } from '../../Services/data/datos.service';
 
 @Component({
-  selector: 'app-nuevo-componente',
-  templateUrl: './nuevo-componente.component.html',
-  styleUrls: ['./nuevo-componente.component.css']
+  selector: 'app-personal-data-hijo',
+  templateUrl: './personal-data-hijo.component.html',
+  styleUrls: ['./personal-data-hijo.component.css']
 })
 export class NuevoComponenteComponent implements OnInit {
   //Con el decorador Input le estoy diciendo que mi atributo es de entrada
@@ -36,12 +36,12 @@ export class NuevoComponenteComponent implements OnInit {
 
   public executeChangeLastName() {
     this.datosService.changeLastName(this.lastNamePersonalData!);
-    console.log("Valor escrito en campo apellido: " + this.namePersonalData);
+    console.log("Valor escrito en campo apellido: " + this.lastNamePersonalData);
   }
 
   public executeChangeDate() {
     this.datosService.changeDate(this.datePersonalData!);
-    console.log("Valor escrito en campo fecha: " + this.namePersonalData);
+    console.log("Valor escrito en campo fecha: " + this.datePersonalData);
   }
   /*
   //Se crea un función donde se le da funcionalidad al evento
