@@ -5,20 +5,19 @@ import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormularioComponent } from './formulario/formulario.component';
-import { PrimerChatComponent } from './primer-chat/primer-chat.component';
-import { SegundoChatComponent } from './segundo-chat/segundo-chat.component';
+import { ChatModule } from './chat/chat.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent,
-    PrimerChatComponent,
-    SegundoChatComponent
+    FormularioComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ChatModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

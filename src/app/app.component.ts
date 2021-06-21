@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { ChatService } from './chat/chat.service';
 import { FormularioService } from './formulario/formulario.service';
 
 @Component({
@@ -7,8 +6,7 @@ import { FormularioService } from './formulario/formulario.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers:[
-    FormularioService,
-    ChatService
+    FormularioService
   ]
 })
 export class AppComponent {
