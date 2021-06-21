@@ -8,20 +8,6 @@ const routes =[
     {
         path: '',
         component: ChatWrapperComponent,
-        children: [
-            {
-                path: '',
-                component: PrimerChatComponent,
-        },
-        {
-            path: '',
-                component: SegundoChatComponent,
-        }
-    ]
-    },
-    {
-        path: '',
-        component: SegundoChatComponent,
     },
     {
         path: '**',
