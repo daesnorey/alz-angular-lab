@@ -1,11 +1,10 @@
-<h1>PRIMER ANGULAR</h1>
-El usuario {{formularioService.matchName}} {{formularioService.matchLastName}} tiene fecha de nacimiento del: {{formularioService.matchBirthDate}}
-<app-formulario>
-</app-formulario>
-<app-primer-chat>
-</app-primer-chat>
-<app-segundo-chat>
-</app-segundo-chat>
+<header>
+    <nav>
+        <a [routerLink]= "['chat']">Chat</a>
+        <a [routerLink]= "['formulario']">Formulario</a>
+    </nav>
+</header>
+<router-outlet></router-outlet>
 
 
 
