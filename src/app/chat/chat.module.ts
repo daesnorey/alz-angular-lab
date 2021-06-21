@@ -5,6 +5,7 @@ import { ChatServiceService } from './services/chat-service.service';
 import { ChatComponent } from './components/chat/chat.component';
 import { MessageSenderComponent } from './components/message-sender/message-sender.component';
 import { MessageReceiverComponent } from './components/message-receiver/message-receiver.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,12 @@ import { MessageReceiverComponent } from './components/message-receiver/message-
   ],
   imports: [
     CommonModule,    
+    FormsModule,
+  ],
+  exports:[
+    ChatComponent,
+    MessageReceiverComponent,
+    MessageSenderComponent,
   ],
   providers: [
     ChatServiceService,

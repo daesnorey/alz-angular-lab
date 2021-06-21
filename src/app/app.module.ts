@@ -4,23 +4,18 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FormModule } from './form/form.module';
-import { ChatComponent } from './chat/components/chat/chat.component';
-import { MessageSenderComponent } from './chat/components/message-sender/message-sender.component';
-import { MessageReceiverComponent } from './chat/components/message-receiver/message-receiver.component';
-import { FormsModule } from '@angular/forms';
+
+import { ChatModule } from './chat/chat.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent,
-    MessageSenderComponent,
-    MessageReceiverComponent,
   ],
   imports: [
     BrowserModule,
     FormModule,
-    AppRoutingModule,
-    FormsModule,
+    ChatModule,    
+    AppRoutingModule,    
   ],
   bootstrap: [AppComponent]
 })

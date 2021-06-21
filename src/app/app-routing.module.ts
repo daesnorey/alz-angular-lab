@@ -5,14 +5,14 @@ import { FormComponent } from "./form/components/form/form.component";
 
 const routes = [
     {
-    path: 'form',
-    component: FormComponent,
+      path: 'form',
+      /* loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule), */
+      component: FormComponent,
     },
     {
       path: 'chat',
       component: ChatComponent,
-      },
-  
+    },  
     {
         path: '**',
         redirectTo: '',
