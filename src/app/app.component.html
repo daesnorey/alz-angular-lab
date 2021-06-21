@@ -1,4 +1,4 @@
-{{parentName}}, {{parentLastName}} nació el día: {{parentBirthDate}}
+<!--{{parentName}}, {{parentLastName}} nació el día: {{parentBirthDate}}
 
 <br>
 <app-test [name]="parentName" [lastName]="parentLastName" [birthDate]="parentBirthDate" (valueChangedName)="onChangeName($event)" (valueChangedLastName)="onChangeLastName($event)" (valueChangedBirthDate)="onChangeBirthDate($event)">
@@ -13,4 +13,13 @@
 
 <br>
 <app-form-chat>
-</app-form-chat>
+</app-form-chat>-->
+<header>
+    <nav>
+        <a [routerLink]="['appChat']">Chat</a><br>
+        <br>
+        <a [routerLink]="['appForm']">Información Personal</a><br>
+        <br>
+    </nav>
+</header>
+<router-outlet></router-outlet>

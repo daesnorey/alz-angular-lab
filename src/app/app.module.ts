@@ -2,22 +2,24 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
-import { FormChatComponent } from './form-chat/form-chat.component'
+/*import { TestComponent } from './test/test.component';
+import { FormChatComponent } from './form-chat/form-chat.component'*/
 import { ChatModule } from './chat_module/chat.module';
+import { FormModule } from './form-chat/form-chat.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent/*,
     TestComponent,    
-    FormChatComponent
+    FormChatComponent*/
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    BrowserModule,    
     FormsModule,
-    ChatModule
+    ChatModule,
+    FormModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
