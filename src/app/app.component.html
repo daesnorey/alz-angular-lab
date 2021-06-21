@@ -9,6 +9,12 @@
   (valueChangedLastName) = "onLastnameChanged($event)"
   (valueChangedBirthDate) = "onBirthdateChanged($event)"></app-test>
 --> 
-
-<app-chat></app-chat>
+<header>
+  <nav>
+    <a [routerLink]="['Chat']">Chat</a>
+    <br>
+    <a [routerLink]="['personal-data']">Personal Data</a>
+  </nav>
+</header>
+<router-outlet></router-outlet>
 
