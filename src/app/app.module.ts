@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ChatModule} from './chat/chat.module'
-import { PersonasModule } from './personas/personas.module'
+import { PersonasModule } from './personas/personas.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,7 @@ import { PersonasModule } from './personas/personas.module'
     BrowserModule,
     FormsModule,
     NgbModule,
-    ChatModule,
-    PersonasModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
