@@ -14,7 +14,6 @@ export class FirstComponentComponent implements OnInit {
    constructor(private formService: FormService) {
   }
 
-  //CHAT
    public onMessageSubmited(){
     this.formService.addMessage(this.name, this.lastname, this.birthdate);
     this.name='';

@@ -10,6 +10,6 @@ export class FormService {
 
   public addMessage(sentName: string, sentLastname: string, sentBirthdate: string){
     this.personas.push(sentName + ',' + sentLastname + ',' + sentBirthdate);
-    console.log("guardando :" + sentName + ', ' + sentLastname + ', ' + sentBirthdate);
+    console.log("formulario :" + sentName + ', ' + sentLastname + ', ' + sentBirthdate);
   }
 }
