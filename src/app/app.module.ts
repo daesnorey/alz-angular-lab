@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { FormModule } from './form/form.module';
 
 import { ChatModule } from './chat/chat.module';
+import { ChatRoutingModule } from './chat/chat-routing.module';
+import { FormRoutingModule } from './form/form-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,7 @@ import { ChatModule } from './chat/chat.module';
     BrowserModule,
     FormModule,
     ChatModule,    
-    AppRoutingModule,    
+    AppRoutingModule, ChatRoutingModule, FormRoutingModule,    
   ],
   bootstrap: [AppComponent]
 })

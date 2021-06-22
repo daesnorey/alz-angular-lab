@@ -1,21 +1,20 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { ChatComponent } from "./chat/components/chat/chat.component";
-import { FormComponent } from "./form/components/form/form.component";
 
-const routes = [
+const routes = [  
     {
       path: 'form',
-      /* loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule), */
-      component: FormComponent,
+      loadChildren: () => import('./form/form.module').then(m => m.FormModule),
+      /* component: FormComponent, */
     },
     {
       path: 'chat',
-      component: ChatComponent,
-    },  
+      loadChildren: () => import('./chat/chat.module').then(m => m.ChatModule),
+      /* component: ChatComponent, */
+    },
     {
         path: '**',
-        redirectTo: '',
+        redirectTo: 'test',
     },    
 ]
 
