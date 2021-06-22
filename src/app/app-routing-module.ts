@@ -1,6 +1,5 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { ChatParentComponent } from "./project-chat/Componentes/chat-parent/chat-parent.component";
 import { PersonalDataPaternComponent } from "./project-personal-data/Componentes/personal-data-parent/personal-data-parent.component";
 
 // Se crea array que contiene lista de rutas a las cuales se puede acceder.
@@ -10,7 +9,7 @@ const rutas = [
       Component: Se relaciona componente al cual se va a acceder en path, en este caso relaciono el componente padre.
       Para definir una ruta comodin se utiliza '**' en el path
     */
-    { path: 'appChat', component: ChatParentComponent },
+    { path: 'appChat', loadChildren: () => import('./project-chat/project-chat.module').then(m => m.ProjectChatModule)  },
     { path: 'appPersonalData', component: PersonalDataPaternComponent },
     { path: '**', redirectTo: 'appChat' }
 ]
