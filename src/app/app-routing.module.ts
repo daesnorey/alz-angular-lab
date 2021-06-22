@@ -5,11 +5,15 @@ import { PersonasComponent } from './personas/componentes/personas/personas.comp
 const routes : Routes = [
   {
     path:'chat',
-    loadChildren : () => import('./chat/chat.module').then( m => m.ChatModule)
+    // loadChildren : () => import('./chat/chat.module').then( m => m.ChatModule)
   },
   {
     path : 'personas',
     component : PersonasComponent,
+  },
+  {
+    path : '',
+    redirectTo : 'chat',
   },
 ]
 
