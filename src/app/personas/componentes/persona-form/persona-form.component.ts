@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormularioService } from 'src/app/personas/services/formulario.service';
+import { FormularioService } from '../../services/formulario.service';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
-  providers: []
+  selector: 'app-persona-form',
+  templateUrl: './persona-form.component.html',
+  styleUrls: ['./persona-form.component.css']
 })
-export class FormComponent implements OnInit {
+
+export class PersonaFormComponent implements OnInit {
 
   public persona = {
     name: '',

@@ -4,8 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PersonasComponent } from './componentes/personas/personas.component';
 
 const routes : Routes = [
-  {path:'personas', component:PersonasComponent},
-  {path:'**', redirectTo: ''}
+  {path:'', component:PersonasComponent},
+  {path:'**', redirectTo: ''},
 ]
 
 @NgModule({
@@ -13,6 +13,9 @@ const routes : Routes = [
   imports: [
     RouterModule.forChild(routes),
     CommonModule
+  ],
+  exports: [
+    RouterModule,
   ]
 })
 export class PersonasRoutingModule { }

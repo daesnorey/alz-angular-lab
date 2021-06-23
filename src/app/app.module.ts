@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PersonasModule } from './personas/personas.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
+import { RegistroModule } from './registro/registro.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     NgbModule,
     AppRoutingModule,
+    CommonModule,
+    RegistroModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormComponent } from './componentes/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { PersonProfileComponent } from './componentes/person-profile/person-profile.component';
 import { PersonasComponent } from './componentes/personas/personas.component';
-
-
-
+import { PersonasRoutingModule } from './personas-routing.module';
+import { FormularioService } from './services/formulario.service';
+import { PersonaFormComponent } from './componentes/persona-form/persona-form.component';
 
 @NgModule({
   declarations: [
-    FormComponent,
     PersonProfileComponent,
-    PersonasComponent
+    PersonasComponent,
+    PersonaFormComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    PersonasModule,
-    
+    PersonasRoutingModule,
   ],
   exports: [
-    PersonasComponent,
-    PersonasModule
+    PersonasComponent
+  ],
+  providers: [
+    FormularioService
   ]
 })
 export class PersonasModule { }

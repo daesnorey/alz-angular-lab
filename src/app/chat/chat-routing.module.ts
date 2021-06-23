@@ -5,7 +5,7 @@ import { ChatComponent } from './componentes/chat/chat.component';
 
 const routes : Routes = [
   {path: '', component : ChatComponent},
-  {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: ''},
 ]
 
 @NgModule({
@@ -15,7 +15,7 @@ const routes : Routes = [
     CommonModule
   ],
   exports: [
-    RouterModule
+    RouterModule,
   ]
 })
 export class ChatRoutingModule { }

@@ -7,8 +7,6 @@ import { ChatComponent } from './componentes/chat/chat.component';
 import { ChatRoutingModule } from './chat-routing.module';
 import { ChatService } from './services/chat.service';
 
-
-
 @NgModule({
   declarations: [
     PersonalChatComponent,

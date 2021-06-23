@@ -1,0 +1,24 @@
+<form [formGroup]="registroFormGroup" (submit)="enviar()">
+    <div class="form-group">
+        <label for="txtNombre" >Nombre</label>
+        <input type="text" id="txtNombre" name="txtNombre" formControlName="nombre"/><br>
+        <label for="txtApellido" >Apellido</label>
+        <input type="text" id="txtApellido" name="txtApellido" formControlName="apellido"/><br>
+        <label for="txtFechaNacimiento" >Fecha Nacimiento</label>
+        <input type="date" id="txtFechaNacimiento" name="txtFechaNacimiento" formControlName="fechaNacimiento"/><br>
+        <label for="txtGenero" >Genero</label>
+        <input type="" id="txtGenero" name="txtGenero" formControlName="genero"/><br>
+        <label for="txtUsuario" >Usuario</label>
+        <input type="text" id="txtUsuario" name="txtUsuario" formControlName="usuario"/><br>
+        <label for="txtPassword" >Contraseña</label>
+        <input type="password" id="txtPassword" name="txtPassword" formControlName="password"/><br>
+    </div>
+    <button *ngIf="registroFormGroup.valid" class="btn btn-primary">Send</button>
+    <p >{{registroFormGroup.value | json}}</p>
+    <p >{{registroFormGroup.get('nombre')?.errors | json}}</p>
+    <p >{{registroFormGroup.get('apellido')?.errors | json}}</p>
+    <p >{{registroFormGroup.get('fechaNacimiento')?.errors | json}}</p>
+    <p >{{registroFormGroup.get('genero')?.errors | json}}</p>
+    <p >{{registroFormGroup.get('usuario')?.errors | json}}</p>
+    <p >{{registroFormGroup.get('password')?.errors | json}}</p>
+</form>
