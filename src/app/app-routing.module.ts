@@ -13,8 +13,12 @@ const routes = [
       /* component: ChatComponent, */
     },
     {
+      path: 'nuevo-form',
+      loadChildren: () => import('./nuevo-formulario/nuevo-formulario.module').then(m => m.NuevoFormularioModule),      
+    },
+    {
         path: '**',
-        redirectTo: 'test',
+        redirectTo: '',
     },    
 ]
 
