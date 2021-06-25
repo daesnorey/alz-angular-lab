@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practica';
+
+  public parentName?: String = "Nicolas";
+  public parentLastName?: String = "Chaves";
+  public parentBirthDate?: String = "08-02-1993";
 }
