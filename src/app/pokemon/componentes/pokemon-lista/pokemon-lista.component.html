@@ -1,0 +1,14 @@
+<app-pokemon-details *ngIf="pokemonSelect" [pokemon]="pokemonSelect"></app-pokemon-details>
+<form (submit)="search(id)">
+  <div class="form-group">
+      <label for="txtNombre">Name:</label><br>
+      <input type="text" id="txtNombre" name="txtNombre" [(ngModel)]="id" >
+  </div>
+  <button class="btn btn-primary">buscar</button>
+</form>
+<img *ngIf="pokemon" src="{{pokemon?.sprites.front_default}}" alt="">
+<ul class="list-group">
+  <li class="list-group-item" (click)="setPokemon(pokemon)" *ngFor="let pokemon of pokemons">{{pokemon.name}} {{pokemon.id}} <img *ngIf="pokemon" src="{{pokemon?.sprites.front_default}}" alt=""></li>
+</ul>
+
+<!-- {{search(pokemon.name)}} -->

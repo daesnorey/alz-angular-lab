@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { RegistroModule } from './registro/registro.module';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RegistroModule } from './registro/registro.module';
     NgbModule,
     AppRoutingModule,
     CommonModule,
-    RegistroModule
+    RegistroModule,
+    PokemonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

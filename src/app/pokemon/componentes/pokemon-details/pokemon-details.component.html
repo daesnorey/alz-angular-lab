@@ -1,0 +1,7 @@
+<p>pokemon-details works!</p>
+nombre: {{pokemon?.name}}
+id: {{pokemon?.id}}
+tipo: {{pokemon?.type | json}}
+<img *ngIf="pokemon" src="{{pokemon?.sprites.front_default}}" alt="">
+
+<!-- {{pokemon | json}} -->
