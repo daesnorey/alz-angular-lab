@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChatComponent } from './chats/components/chat/chat.component';
+import { FormularioComponent } from './formulario/formulario.component';
 import { TestComponent } from './test/test.component';
 
 const routes= [
@@ -11,6 +12,10 @@ const routes= [
   {
     path: 'personal-data',
     component: TestComponent
+  },
+  {
+    path: 'formulario',
+    component: FormularioComponent
   },
   {
     path: '**',
