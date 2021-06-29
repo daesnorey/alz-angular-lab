@@ -1,20 +1,17 @@
-<!--
-<h2>{{parentName}} {{parentLastname}} nació el: {{parentBirthdate}}</h2>
-  
-  <app-test 
-  [name]="parentName"
-  [lastname]="parentLastname"
-  [birthdate]="parentBirthdate"
-  (valueChangedName) = "onNameChanged($event)"
-  (valueChangedLastName) = "onLastnameChanged($event)"
-  (valueChangedBirthDate) = "onBirthdateChanged($event)"></app-test>
---> 
-<header>
-  <nav>
-    <a [routerLink]="['Chat']">Chat</a>
-    <br>
-    <a [routerLink]="['personal-data']">Personal Data</a>
-  </nav>
-</header>
-<router-outlet></router-outlet>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Inicio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav">
+    <div class="navbar-nav">  
+      <a class="nav-link" [routerLink]="['chat']">CHAT</a>
+      <a class="nav-item nav-link " [routerLink]="['personal-data']">PERSONAL</a>
+      <a class="nav-item nav-link" [routerLink]="['formulario']">REGISTRO</a>
+    </div>
+  </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
