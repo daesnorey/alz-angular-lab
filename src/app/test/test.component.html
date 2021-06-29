@@ -1,4 +1,5 @@
-    
+<div class="row  justify-content-center align-items-center">
+  <div class="col-auto  p-5">   
   <label>Nombre</label>
   <br>
   <input   placeholder="nombre" [(ngModel)]="name" (input)="onChangedName($event)">
@@ -12,4 +13,9 @@
   <input type="date" placeholder="fecha-nacimiento" [(ngModel)]="birthdate" (input)="onChangedBirthDate($event)">
   <br>
   <br>
+  <h5>
   {{name}} {{lastname}} nació en {{birthdate}}
+</h5>
+</div>
+</div>
+ 

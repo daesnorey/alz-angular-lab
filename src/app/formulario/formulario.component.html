@@ -1,0 +1,70 @@
+<div class="row justify-content-center align-items-center">
+    <div class="col-auto bg-light p-3">
+        <form (submit)="submit($event)" [formGroup]="miFormulario">
+            <div class="form-group p-1">
+                <label>
+                    Nombre
+                    <input type="text" formControlName="nombre" class="form-control">
+                </label>
+            </div>
+            <p *ngIf="miFormulario.get('nombre')?.errors?.required">
+                Este campo es obligatorio
+            </p>
+            <div class="form-group p-1">
+                <label>
+                    Apellido
+                    <input type="text" formControlName="apellido" class="form-control">
+                </label>
+            </div>
+            <p *ngIf="miFormulario.get('apellido')?.errors?.required">
+                Este campo es obligatorio
+            </p>
+            <div class="form-group p-1">
+                <label>
+                    Fecha de Nacimiento
+                    <input type="date" placeholder="fecha-nacimiento" class="form-control"
+                        formControlName="fechaNacimiento">
+                </label>
+            </div>
+            <p *ngIf="miFormulario.get('fechaNacimiento')?.errors?.required">
+                Este campo es obligatorio
+            </p>
+            <div class="form-group p-1">
+                <label>
+                    Genero
+                    <input type="text" class="form-control" formControlName="genero">
+                </label>
+            </div>
+            <p *ngIf="miFormulario.get('genero')?.errors?.required">
+                Este campo es obligatorio
+            </p>
+            <div class="form-group p-1">
+                <label>
+                    Usuario
+                    <input type="email" class="form-control" formControlName="usuario">
+                </label>
+            </div>
+            <p *ngIf="miFormulario.get('usuario')?.errors?.required">
+                Este campo es obligatorio
+            </p>
+            <p *ngIf="miFormulario.get('usuario')?.errors?.email">
+                Este no es un correo valido
+            </p>
+            <p *ngIf="miFormulario.get('usuario')?.errors?.pattern">
+                El domino del correo no es valido
+            </p>
+            <div class="form-group p-1">
+                <label>
+                    Contraseña
+                    <input type="password" class="form-control" formControlName="password">
+                </label>
+            </div>
+            <p *ngIf="miFormulario.get('password')?.errors?.required">
+                Este campo es obligatorio
+            </p>
+            <div class="p-3">
+                <button [disabled]="miFormulario.invalid" type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+</div>

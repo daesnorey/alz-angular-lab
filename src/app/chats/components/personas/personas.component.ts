@@ -23,7 +23,7 @@ export class PersonasComponent implements OnInit {
     if(this.mensaje){
       this.chatService.addMessage(this.mensaje);
       console.log("almacenado"+ this.mensaje)
-      this.mensaje = '';    
+      this.mensaje = '';   
       
     }
   }
