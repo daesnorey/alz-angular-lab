@@ -1,0 +1,10 @@
+<input type="search" placeholder="Buscar pais" [formControl]="searchControl">
+<ng-container *ngFor="let country of countries">
+    <p>
+       País: {{country.name}}
+    </p>
+    <p>
+        Capital: {{country.capital}}
+    </p>
+    <br>
+</ng-container>
