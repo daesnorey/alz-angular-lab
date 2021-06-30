@@ -1,7 +1,19 @@
-<header>
-    <nav>
-        <a [routerLink]="['chat']">Chat</a>
-        <a [routerLink]="['personal-data']">Personal Data</a>
-    </nav>
-</header>
+<!--
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button [routerLink]="['chat']" class="btn btn-outline-success" type="button">Chat</button>
+    <button [routerLink]="['personal-data']" class="btn btn-outline-success" type="button">Personal Data</button>
+    <button [routerLink]="['validate-from']" class="btn btn-outline-success" type="button">Validate From</button>
+  </form>
+</nav>
 <router-outlet></router-outlet>
+
+<input type="search" placeholder="buscar pais..." [formControl]="searchControl" >
+-->
+<ng-container *ngFor="let country of countries">
+    <p>
+      {{country.name}}
+      -
+      {{country.capital}}
+    </p>
+</ng-container>
