@@ -1,0 +1,15 @@
+<input type="search" 
+        placeholder="buscar país..." 
+        [formControl] = "searchControl">
+
+<ng-container *ngFor= "let country of countries" >
+    <p>
+        {{country.name}}; {{country.capital}}, {{country.languages[0].name}}
+        
+<!--         <ng-container *ngFor= "let language of languages" >
+            {{country.language.name}}
+        </ng-container>
+ -->        
+        
+    </p>
+</ng-container>

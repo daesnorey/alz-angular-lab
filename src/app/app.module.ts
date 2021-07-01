@@ -18,7 +18,10 @@ import { NuevoFormularioRoutingModule } from './nuevo-formulario/nuevo-formulari
     BrowserModule,
     FormModule,
     ChatModule,    
-    AppRoutingModule, ChatRoutingModule, FormRoutingModule, NuevoFormularioRoutingModule,    
+    AppRoutingModule, 
+    ChatRoutingModule, 
+    FormRoutingModule, 
+    NuevoFormularioRoutingModule,    
   ],
   bootstrap: [AppComponent]
 })

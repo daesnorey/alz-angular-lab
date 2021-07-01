@@ -17,6 +17,11 @@ const routes = [
       loadChildren: () => import('./nuevo-formulario/nuevo-formulario.module').then(m => m.NuevoFormularioModule),      
     },
     {
+      path: 'promises',
+      loadChildren: () => import('./promises-observables/promises-observables.module').then(m => m.PromisesObservablesModule),      
+    },
+
+    {
         path: '**',
         redirectTo: '',
     },    
